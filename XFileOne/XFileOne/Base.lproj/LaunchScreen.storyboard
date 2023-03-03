@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="JN3-Jq-sEU">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nC-eR-hfR">
+                                <rect key="frame" x="105.00000000000001" y="691" width="183.33333333333337" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_icon" translatesAutoresizingMaskIntoConstraints="NO" id="q9A-Ip-SZd">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="z1i-Ka-SRR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXX盲盒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0e-c7-5c9">
+                                        <rect key="frame" x="70" y="36.333333333333371" width="113.33333333333331" height="27.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                        <color key="textColor" red="0.15294117647058825" green="0.16470588235294117" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="J0e-c7-5c9" firstAttribute="centerY" secondItem="q9A-Ip-SZd" secondAttribute="centerY" id="DwS-Wr-3Ej"/>
+                                    <constraint firstItem="q9A-Ip-SZd" firstAttribute="top" secondItem="4nC-eR-hfR" secondAttribute="top" id="LN2-zL-8cd"/>
+                                    <constraint firstAttribute="bottom" secondItem="q9A-Ip-SZd" secondAttribute="bottom" id="SaI-Sq-ZeB"/>
+                                    <constraint firstItem="q9A-Ip-SZd" firstAttribute="leading" secondItem="4nC-eR-hfR" secondAttribute="leading" id="g8q-S9-86H"/>
+                                    <constraint firstAttribute="trailing" secondItem="J0e-c7-5c9" secondAttribute="trailing" id="s0G-Jl-hyS"/>
+                                    <constraint firstItem="J0e-c7-5c9" firstAttribute="leading" secondItem="q9A-Ip-SZd" secondAttribute="trailing" constant="20" id="sHG-jx-LxR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JN3-Jq-sEU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4Bl-7q-bCP"/>
+                            <constraint firstItem="4nC-eR-hfR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4sb-L0-rcv"/>
+                            <constraint firstItem="JN3-Jq-sEU" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="5uf-qM-hOP"/>
+                            <constraint firstAttribute="bottom" secondItem="JN3-Jq-sEU" secondAttribute="bottom" id="ArK-r6-pmz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4nC-eR-hfR" secondAttribute="bottom" constant="27" id="okY-ew-QLG"/>
+                            <constraint firstItem="JN3-Jq-sEU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xIM-iW-ZRu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launch" width="375" height="666.5"/>
+        <image name="login_icon" width="99.5" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="133" id="KGk-i7-Jjw" customClass="WarehouseCell" customModule="XFileOne" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="133"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="133"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGd-7u-3of">
+                        <rect key="frame" x="16" y="8" width="343" height="117"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bHA-au-Z1U">
+                                <rect key="frame" x="0.0" y="0.0" width="149" height="117"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mwW-zy-faW">
+                                <rect key="frame" x="149" y="15" width="194" height="87"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFa-nv-QaU">
+                                        <rect key="frame" x="0.0" y="0.0" width="194" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
+                                        <color key="textColor" red="0.27058823529411763" green="0.25882352941176467" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Taz-P5-zV0">
+                                        <rect key="frame" x="0.0" y="29" width="194" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="规格：默认" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYw-VE-kWq">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.333333333333336" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                <color key="textColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="sYw-VE-kWq" firstAttribute="leading" secondItem="Taz-P5-zV0" secondAttribute="leading" id="5ve-tJ-zVj"/>
+                                            <constraint firstItem="sYw-VE-kWq" firstAttribute="top" secondItem="Taz-P5-zV0" secondAttribute="top" id="XmQ-rg-jDI"/>
+                                            <constraint firstAttribute="bottom" secondItem="sYw-VE-kWq" secondAttribute="bottom" id="ytK-92-S39"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpk-1G-5oU">
+                                        <rect key="frame" x="0.0" y="58" width="194" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提货时间：2023-01-01 18:35:45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XL-GH-kXg">
+                                                <rect key="frame" x="0.0" y="0.0" width="157" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="9XL-GH-kXg" firstAttribute="top" secondItem="cpk-1G-5oU" secondAttribute="top" id="b1H-PQ-xwT"/>
+                                            <constraint firstAttribute="bottom" secondItem="9XL-GH-kXg" secondAttribute="bottom" id="xQ6-mz-He2"/>
+                                            <constraint firstItem="9XL-GH-kXg" firstAttribute="leading" secondItem="cpk-1G-5oU" secondAttribute="leading" id="xUr-gZ-T9m"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已兑换" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbn-tl-MLH">
+                                <rect key="frame" x="302.33333333333331" y="23.666666666666668" width="30.666666666666686" height="12.000000000000004"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="10"/>
+                                <color key="textColor" red="1" green="0.45882352941176469" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="vkH-rj-ZMa">
+                                <rect key="frame" x="149" y="80" width="174" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59p-Hr-OdD">
+                                        <rect key="frame" x="0.0" y="0.0" width="49.333333333333336" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="赠送">
+                                            <color key="titleColor" red="0.27058823529411763" green="0.25882352941176467" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fitFontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="giftAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cOQ-3K-Pif"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bee-bK-P9o">
+                                        <rect key="frame" x="62.333333333333343" y="0.0" width="49.333333333333343" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="兑换">
+                                            <color key="titleColor" red="0.27058823529999998" green="0.25882352939999997" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fitFontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="exchangeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="a9T-tO-bkm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uc-Xb-pXt">
+                                        <rect key="frame" x="124.66666666666667" y="0.0" width="49.333333333333329" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="提货">
+                                            <color key="titleColor" red="0.27058823529999998" green="0.25882352939999997" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fitFontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pickupAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Pnk-qx-zGy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="jLn-zC-hoi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bHA-au-Z1U" firstAttribute="top" secondItem="SGd-7u-3of" secondAttribute="top" id="9I0-XO-bGL"/>
+                            <constraint firstItem="bHA-au-Z1U" firstAttribute="width" secondItem="SGd-7u-3of" secondAttribute="width" multiplier="0.434028" id="9mc-0Q-qQy"/>
+                            <constraint firstItem="mwW-zy-faW" firstAttribute="leading" secondItem="bHA-au-Z1U" secondAttribute="trailing" id="Crs-zC-yz2"/>
+                            <constraint firstAttribute="trailing" secondItem="mwW-zy-faW" secondAttribute="trailing" id="GFH-mp-Y9Y"/>
+                            <constraint firstItem="mwW-zy-faW" firstAttribute="top" secondItem="SGd-7u-3of" secondAttribute="top" constant="15" id="R7g-VG-HJZ"/>
+                            <constraint firstItem="vkH-rj-ZMa" firstAttribute="leading" secondItem="bHA-au-Z1U" secondAttribute="trailing" id="Tpy-YO-vVz"/>
+                            <constraint firstAttribute="bottom" secondItem="bHA-au-Z1U" secondAttribute="bottom" id="Ww0-yv-mD5"/>
+                            <constraint firstItem="bHA-au-Z1U" firstAttribute="leading" secondItem="SGd-7u-3of" secondAttribute="leading" id="cKn-HR-omy"/>
+                            <constraint firstAttribute="trailing" secondItem="Jbn-tl-MLH" secondAttribute="trailing" constant="10" id="ceT-XS-qPH"/>
+                            <constraint firstAttribute="bottom" secondItem="mwW-zy-faW" secondAttribute="bottom" constant="15" id="op4-cN-vH7"/>
+                            <constraint firstItem="Jbn-tl-MLH" firstAttribute="centerY" secondItem="OFa-nv-QaU" secondAttribute="centerY" id="qGC-qL-Qh8"/>
+                            <constraint firstAttribute="trailing" secondItem="vkH-rj-ZMa" secondAttribute="trailing" constant="20" id="ubd-B5-kJ3"/>
+                            <constraint firstAttribute="bottom" secondItem="vkH-rj-ZMa" secondAttribute="bottom" constant="15" id="yrW-8k-eqd"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lK-fn-2LA">
+                        <rect key="frame" x="269" y="83.666666666666671" width="70" height="31"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <inset key="contentEdgeInsets" minX="10" minY="8" maxX="10" maxY="8"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="取消赠送">
+                            <color key="titleColor" red="0.27058823529999998" green="0.25882352939999997" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fitFontSize">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="cancelAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OSJ-kb-dnC"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="SGd-7u-3of" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="EH3-Th-Xsc"/>
+                    <constraint firstAttribute="trailing" secondItem="SGd-7u-3of" secondAttribute="trailing" constant="16" id="GLM-UF-oJ9"/>
+                    <constraint firstItem="5lK-fn-2LA" firstAttribute="centerY" secondItem="vkH-rj-ZMa" secondAttribute="centerY" id="HyD-NM-7w2"/>
+                    <constraint firstItem="SGd-7u-3of" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="js2-RE-6IC"/>
+                    <constraint firstItem="5lK-fn-2LA" firstAttribute="trailing" secondItem="vkH-rj-ZMa" secondAttribute="trailing" id="kXN-kc-l3u"/>
+                    <constraint firstAttribute="bottom" secondItem="SGd-7u-3of" secondAttribute="bottom" constant="8" id="ujv-lO-aYg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="buttonStackView" destination="vkH-rj-ZMa" id="Yr2-fe-6Mf"/>
+                <outlet property="cancelButton" destination="5lK-fn-2LA" id="Qz4-o9-OVW"/>
+                <outlet property="exchangeButton" destination="Bee-bK-P9o" id="kdK-zm-iKw"/>
+                <outlet property="giftButton" destination="59p-Hr-OdD" id="xje-f7-WmR"/>
+                <outlet property="label2" destination="sYw-VE-kWq" id="wKM-iF-eCN"/>
+                <outlet property="label3" destination="9XL-GH-kXg" id="NzP-cP-zjs"/>
+                <outlet property="pickupButton" destination="7uc-Xb-pXt" id="4qt-4L-kUN"/>
+                <outlet property="productIcon" destination="bHA-au-Z1U" id="lw9-Lc-Bc3"/>
+                <outlet property="productTitle" destination="OFa-nv-QaU" id="fGK-ea-wbD"/>
+                <outlet property="statusLabel" destination="Jbn-tl-MLH" id="0ec-K6-aj3"/>
+            </connections>
+            <point key="canvasLocation" x="103.81679389312977" y="43.661971830985919"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  XFileOne
+
+  Created by 郭嘉俊 on 2022/8/31.
+  
+*/
+"首页" = "Home";
+"商城" = "Shopping";
+"仓库" = "Warehouse";
+"我的" = "User";
+"测试" = "Testing";
+
+"设置" = "Setting";
