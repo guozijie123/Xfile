@@ -224,6 +224,9 @@ class JJSignInViewController: BaseViewController {
         let phone = "18824180016"
         let code = "86"
         let password = "112233"
+//        let phone = "12345678"
+//        let code = "86"
+//        let password = ""
         
         
         
@@ -235,16 +238,13 @@ class JJSignInViewController: BaseViewController {
         let postParmas:[String:String] = ["phone":phone,"password":HandleTheString.handleThePassword(password),"ccode":code,"sign":sign!]
         
         //开始数据请求
-        print(postParmas)
-        
-        
-        JJNetworkManager.API_POST(url: "login", postParmas: postParmas) { [weak self]Json in
-            JJUser.shared.initUser(json: Json)
-            JJManager.shared.login(userId: JJUser.shared.userid, sign: sign!)
+//        print(postParmas)
+
+        IndiaServer.getStart().regAndLogin(withThePhone: phone, code: code, password: password, model: false) { userid, error in
+//            JJUser.shared.initUser(json: Json)
+//            JJManager.shared.login(userId: JJUser.shared.userid, sign: sign!)
             JJToast.toast(content: "登录成功")
-            self?.dismiss(animated: true)
-        } fail: { msg in
-            
+//            self?.dismiss(animated: true)
         }
     }
     

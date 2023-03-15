@@ -47,11 +47,6 @@ class JJUnsubscribeViewController: BaseViewController {
     }
     @IBAction func clickUnsubscribe(_ sender: Any) {
         JJPopView.initConfirmPopView(title: "注销账号", content: "注销后将清空账号", leftButtonTitle: "取消", rightButtonTitle: "确定", leftCallback: nil) {
-            JJNetworkManager.API_POST(url: "cancelaccount", postParmas: ["":""]) { Json in
-                
-            } fail: { msg in
-                
-            }
 
         }
     }

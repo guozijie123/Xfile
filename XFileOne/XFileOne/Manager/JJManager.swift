@@ -32,7 +32,7 @@ extension JJManager {
         if sign.count > 0 && userId.count > 0 {
             self.userId = userId
             self.sign = sign
-            getUserInfo()
+            getUserInfo(userId: userId)
         }else {
             logout()
         }
@@ -44,6 +44,8 @@ extension JJManager {
         UserDefaults.standard.set(userId, forKey: "kUserId")
         UserDefaults.standard.set(sign, forKey: "kSign")
         UserDefaults.standard.synchronize()
+        
+        getUserInfo(userId: userId)
     }
     // 记录推出登录
     func logout() {
@@ -58,20 +60,10 @@ extension JJManager {
 
 //MARK: API Function
 extension JJManager {
-    // 检查用户是否登录
-    func checkOnLine() {
-        JJNetworkManager.API_POST(url: "checkonline", postParmas: [:]) { Json in
-            print(Json)
-        } fail: { msg in
-            
-        }
-    }
+
     // 读取最新用户数据
-    func getUserInfo() {
-        let param = ["userid": self.userId, "sign":self.sign]
-        JJNetworkManager.API_POST(url: "userinfo", postParmas: param) { Json in
-            print(Json)
-        } fail: { msg in
+    func getUserInfo(userId: String) {
+        IndiaServer.getStart().checkTheUserDetail(userId) { result, error in
             
         }
     }
@@ -79,10 +71,7 @@ extension JJManager {
     // 读取用户消息
     func getMessage() {
         let param = ["":""]
-        JJNetworkManager.API_POST(url: "getmessage", postParmas: param) { Json in
-            print(Json)
-        } fail: { msg in
-            
-        }
+
     }
+    
 }

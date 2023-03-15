@@ -49,11 +49,6 @@
 		AC9F0D37296FE20100CCC966 /* JJAddressEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F0D35296FE20100CCC966 /* JJAddressEditViewController.swift */; };
 		AC9F0D38296FE20100CCC966 /* JJAddressEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9F0D36296FE20100CCC966 /* JJAddressEditViewController.xib */; };
 		ACA66EC929A2122F00760589 /* JJUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA66EC829A2122F00760589 /* JJUser.swift */; };
-		ACA66ED229A21E7900760589 /* HWNetworkingOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA66ECD29A21E7900760589 /* HWNetworkingOC.swift */; };
-		ACA66ED329A21E7900760589 /* HWAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA66ECE29A21E7900760589 /* HWAPI.swift */; };
-		ACA66ED429A21E7900760589 /* HWMultipartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA66ECF29A21E7900760589 /* HWMultipartData.swift */; };
-		ACA66ED529A21E7900760589 /* HWNetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA66ED029A21E7900760589 /* HWNetworkingError.swift */; };
-		ACA66ED629A21E7900760589 /* HWNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA66ED129A21E7900760589 /* HWNetworking.swift */; };
 		ACA66ED829A220FA00760589 /* JJManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA66ED729A220FA00760589 /* JJManager.swift */; };
 		ACA66EDA29A2276C00760589 /* JJNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA66ED929A2276C00760589 /* JJNetworkManager.swift */; };
 		ACA66EDD29A28B4200760589 /* WarehouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA66EDB29A28B4200760589 /* WarehouseCell.swift */; };
@@ -99,6 +94,11 @@
 		ACB327FB28C20D770004F8B2 /* LLContainerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB327F028C20D770004F8B2 /* LLContainerScrollView.swift */; };
 		ACB327FC28C20D770004F8B2 /* LLCtlPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB327F128C20D770004F8B2 /* LLCtlPageView.swift */; };
 		ACB327FD28C20D770004F8B2 /* LLToolFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB327F228C20D770004F8B2 /* LLToolFunc.swift */; };
+		ACEC2F7729C161B0004270E8 /* IndiaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEC2F7629C161B0004270E8 /* IndiaSDK.framework */; };
+		ACEC2F7C29C16318004270E8 /* FBSDKCoreKit_Basics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEC2F7829C16317004270E8 /* FBSDKCoreKit_Basics.framework */; };
+		ACEC2F7D29C16318004270E8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEC2F7929C16317004270E8 /* FBSDKLoginKit.framework */; };
+		ACEC2F7E29C16318004270E8 /* FBAEMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEC2F7A29C16317004270E8 /* FBAEMKit.framework */; };
+		ACEC2F7F29C16318004270E8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEC2F7B29C16318004270E8 /* FBSDKCoreKit.framework */; };
 		ACF2428529AC698E00157112 /* JJSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2428329AC698E00157112 /* JJSignInViewController.swift */; };
 		ACF2428629AC698E00157112 /* JJSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF2428429AC698E00157112 /* JJSignInViewController.xib */; };
 		ACF2428929ACAA4800157112 /* WareProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2428729ACAA4800157112 /* WareProductViewController.swift */; };
@@ -153,11 +153,6 @@
 		AC9F0D35296FE20100CCC966 /* JJAddressEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJAddressEditViewController.swift; sourceTree = "<group>"; };
 		AC9F0D36296FE20100CCC966 /* JJAddressEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JJAddressEditViewController.xib; sourceTree = "<group>"; };
 		ACA66EC829A2122F00760589 /* JJUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJUser.swift; sourceTree = "<group>"; };
-		ACA66ECD29A21E7900760589 /* HWNetworkingOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWNetworkingOC.swift; sourceTree = "<group>"; };
-		ACA66ECE29A21E7900760589 /* HWAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWAPI.swift; sourceTree = "<group>"; };
-		ACA66ECF29A21E7900760589 /* HWMultipartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWMultipartData.swift; sourceTree = "<group>"; };
-		ACA66ED029A21E7900760589 /* HWNetworkingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWNetworkingError.swift; sourceTree = "<group>"; };
-		ACA66ED129A21E7900760589 /* HWNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWNetworking.swift; sourceTree = "<group>"; };
 		ACA66ED729A220FA00760589 /* JJManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJManager.swift; sourceTree = "<group>"; };
 		ACA66ED929A2276C00760589 /* JJNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJNetworkManager.swift; sourceTree = "<group>"; };
 		ACA66EDB29A28B4200760589 /* WarehouseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarehouseCell.swift; sourceTree = "<group>"; };
@@ -208,6 +203,11 @@
 		ACB327F028C20D770004F8B2 /* LLContainerScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLContainerScrollView.swift; sourceTree = "<group>"; };
 		ACB327F128C20D770004F8B2 /* LLCtlPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLCtlPageView.swift; sourceTree = "<group>"; };
 		ACB327F228C20D770004F8B2 /* LLToolFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLToolFunc.swift; sourceTree = "<group>"; };
+		ACEC2F7629C161B0004270E8 /* IndiaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IndiaSDK.framework; sourceTree = "<group>"; };
+		ACEC2F7829C16317004270E8 /* FBSDKCoreKit_Basics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit_Basics.framework; sourceTree = "<group>"; };
+		ACEC2F7929C16317004270E8 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		ACEC2F7A29C16317004270E8 /* FBAEMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAEMKit.framework; sourceTree = "<group>"; };
+		ACEC2F7B29C16318004270E8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		ACF2428329AC698E00157112 /* JJSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJSignInViewController.swift; sourceTree = "<group>"; };
 		ACF2428429AC698E00157112 /* JJSignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JJSignInViewController.xib; sourceTree = "<group>"; };
 		ACF2428729ACAA4800157112 /* WareProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WareProductViewController.swift; sourceTree = "<group>"; };
@@ -219,7 +219,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACEC2F7E29C16318004270E8 /* FBAEMKit.framework in Frameworks */,
+				ACEC2F7F29C16318004270E8 /* FBSDKCoreKit.framework in Frameworks */,
+				ACEC2F7C29C16318004270E8 /* FBSDKCoreKit_Basics.framework in Frameworks */,
 				298DA2E84F1B5E6C17E38394 /* Pods_XFileOne.framework in Frameworks */,
+				ACEC2F7D29C16318004270E8 /* FBSDKLoginKit.framework in Frameworks */,
+				ACEC2F7729C161B0004270E8 /* IndiaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,11 +381,11 @@
 		ACA66ECC29A21E7900760589 /* HWNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				ACA66ECE29A21E7900760589 /* HWAPI.swift */,
-				ACA66ECF29A21E7900760589 /* HWMultipartData.swift */,
-				ACA66ED129A21E7900760589 /* HWNetworking.swift */,
-				ACA66ED029A21E7900760589 /* HWNetworkingError.swift */,
-				ACA66ECD29A21E7900760589 /* HWNetworkingOC.swift */,
+				ACEC2F7A29C16317004270E8 /* FBAEMKit.framework */,
+				ACEC2F7829C16317004270E8 /* FBSDKCoreKit_Basics.framework */,
+				ACEC2F7B29C16318004270E8 /* FBSDKCoreKit.framework */,
+				ACEC2F7929C16317004270E8 /* FBSDKLoginKit.framework */,
+				ACEC2F7629C161B0004270E8 /* IndiaSDK.framework */,
 				ACA66ED929A2276C00760589 /* JJNetworkManager.swift */,
 			);
 			path = HWNetworking;
@@ -758,7 +763,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACA66ED229A21E7900760589 /* HWNetworkingOC.swift in Sources */,
 				ACACA9F528BF3D300006F495 /* JJLanguageViewController.swift in Sources */,
 				ACACA9D928BEFFA40006F495 /* BaseViewController.swift in Sources */,
 				ACACAA0D28BF5D9D0006F495 /* UIButtonExtension.swift in Sources */,
@@ -772,14 +776,12 @@
 				AC25E56B299CC06A0089B79B /* HandleTheString.m in Sources */,
 				ACACA9DB28BEFFD20006F495 /* JJUserViewController.swift in Sources */,
 				ACB327F728C20D770004F8B2 /* LLSegmentBaseItemView.swift in Sources */,
-				ACA66ED329A21E7900760589 /* HWAPI.swift in Sources */,
 				ACAC67FA296EBF3A00F6B846 /* JJWarehouseViewController.swift in Sources */,
 				ACACAA0C28BF5D9D0006F495 /* String+AttributedString.swift in Sources */,
 				ACB327F528C20D770004F8B2 /* LLSegmentItemTabbarView.swift in Sources */,
 				ACA66EDA29A2276C00760589 /* JJNetworkManager.swift in Sources */,
 				AC9F0D37296FE20100CCC966 /* JJAddressEditViewController.swift in Sources */,
 				ACACAA1228BF70630006F495 /* Tools.swift in Sources */,
-				ACA66ED629A21E7900760589 /* HWNetworking.swift in Sources */,
 				AC25E53C299BCF550089B79B /* JJWebViewController.swift in Sources */,
 				AC9B97AC29866AE600806481 /* UserItemACell.swift in Sources */,
 				ACB327F828C20D770004F8B2 /* LLSegmentedControl.swift in Sources */,
@@ -826,12 +828,10 @@
 				ACACA9FE28BF5B070006F495 /* FontTestingViewController.swift in Sources */,
 				ACB327D828C052B70004F8B2 /* Toast.swift in Sources */,
 				AC9B97B72987655A00806481 /* OrderManagerViewController.swift in Sources */,
-				ACA66ED429A21E7900760589 /* HWMultipartData.swift in Sources */,
 				ACF2428929ACAA4800157112 /* WareProductViewController.swift in Sources */,
 				ACACA9FC28BF59720006F495 /* FontFitSizeExtension.swift in Sources */,
 				ACB327F928C20D770004F8B2 /* LLIndicatorView.swift in Sources */,
 				ACACAA0E28BF5D9D0006F495 /* ThemeButton.swift in Sources */,
-				ACA66ED529A21E7900760589 /* HWNetworkingError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,11 +992,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = AC2Q7KVX63;
+				DEVELOPMENT_TEAM = ABWG6HSMKY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XFileOne/GlobalConfig/HWNetworking",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XFileOne/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "盲盒";
@@ -1010,10 +1012,54 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"swiftCoreGraphics\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxRelay\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"pop\"",
+					"-weak_framework",
+					"\"Combine\"",
+					"-weak_framework",
+					"\"SwiftUI\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.manghe.x1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = manghe_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "XFileOne/XFileOne-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1029,11 +1075,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ABWG6HSMKY;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = AC2Q7KVX63;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XFileOne/GlobalConfig/HWNetworking",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XFileOne/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "盲盒";
@@ -1047,10 +1096,54 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"swiftCoreGraphics\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxRelay\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"pop\"",
+					"-weak_framework",
+					"\"Combine\"",
+					"-weak_framework",
+					"\"SwiftUI\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.manghe.x1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = manghe_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "XFileOne/XFileOne-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
