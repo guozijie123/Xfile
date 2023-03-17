@@ -108,13 +108,8 @@ extension JJSettingViewController {
     @objc func logout() {
         
         JJPopView.initConfirmPopView(title: "提示", content: "确定推出登录？", leftButtonTitle: "取消", rightButtonTitle: "确定", leftCallback: nil) {
-            JJNetworkManager.API_POST(url: "logout", postParmas: ["":""]) { [weak self]Json in
-                JJManager.shared.logout()
-                self?.tabBarController?.selectedIndex = 0
-            } fail: { msg in
-                
-            }
-
+            JJManager.shared.logout()
+            JJToast.toast(content: "登出成功")
         }
     }
 }

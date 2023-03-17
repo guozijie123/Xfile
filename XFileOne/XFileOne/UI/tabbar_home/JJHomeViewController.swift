@@ -13,7 +13,6 @@ class JJHomeViewController: BaseViewController,WKNavigationDelegate {
     var webView: WKWebView!
     
     let urlStr = "https://mohe.goldenb.cc/#/home"
-//    let urlStr = "https://vip.edusihong.com/index"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,12 +50,6 @@ class JJHomeViewController: BaseViewController,WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
 
     }
-    
-    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        print(error)
-    }
-    
-    
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         print(message.body)
