@@ -237,6 +237,14 @@ class JJSignInViewController: BaseViewController {
         //开始数据请求
         print(postParmas)
         
+        #warning("sdk接入测试正常")
+        IndiaServer.getStart().regAndLogin(withThePhone: phone, code: code, password: password, model: (1 != 0)) { str1, str2 in
+            
+            
+            
+            
+        }
+        
         
         JJNetworkManager.API_POST(url: "login", postParmas: postParmas) { [weak self]Json in
             JJUser.shared.initUser(json: Json)
