@@ -8,7 +8,11 @@
 import UIKit
 import WebKit
 
-class JJWebViewController: BaseViewController {
+class JJWebViewController: BaseViewController{
+    
+    
+    
+    
     
     var webView: WKWebView!
     
@@ -42,15 +46,20 @@ class JJWebViewController: BaseViewController {
         
         let configuration = WKWebViewConfiguration()
         configuration.userContentController = WKUserContentController()
-
         let webView = WKWebView(frame: self.view.frame, configuration: configuration)
+        
+        
         webView.scrollView.bounces = true
         webView.scrollView.alwaysBounceVertical = true
         view.addSubview(webView)
         webView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        
         self.webView = webView
+        
+        
+        
     }
     
     // 加载 url
@@ -58,5 +67,9 @@ class JJWebViewController: BaseViewController {
         self.urlStr = url
         self.webView.load(URLRequest.init(url: URL(string: self.urlStr!)!))
     }
+    
+    
+    
+    
     
 }

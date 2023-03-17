@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class JJHomeViewController: BaseViewController,WKNavigationDelegate {
+class JJHomeViewController: BaseViewController,WKScriptMessageHandler,WKNavigationDelegate,WKUIDelegate {
 
     var webView: WKWebView!
     
@@ -33,7 +33,7 @@ class JJHomeViewController: BaseViewController,WKNavigationDelegate {
         
         let configuration = WKWebViewConfiguration()
         configuration.userContentController = WKUserContentController()
-
+        configuration.userContentController.add(self, name: "openView")
         let webView = WKWebView(frame: self.view.frame, configuration: configuration)
         webView.scrollView.bounces = true
         webView.scrollView.alwaysBounceVertical = true
@@ -52,7 +52,11 @@ class JJHomeViewController: BaseViewController,WKNavigationDelegate {
     }
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        print(message.body)
+        
+        if message.name == "openView"{
+            print("接收链接push打开下层页面来打开webview %@",message.body)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
