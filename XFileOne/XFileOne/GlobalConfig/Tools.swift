@@ -15,6 +15,9 @@ class Tools: NSObject {
         if scale > 1.5 { scale = 1.5 }
         return scale * size
     }
+    static func kScreenWidth() -> CGFloat{
+        return UIScreen.main.bounds.width
+    }
 
     
 //    获取当前TopViewController

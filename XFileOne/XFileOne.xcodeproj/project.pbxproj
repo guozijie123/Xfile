@@ -103,6 +103,13 @@
 		ACB327FB28C20D770004F8B2 /* LLContainerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB327F028C20D770004F8B2 /* LLContainerScrollView.swift */; };
 		ACB327FC28C20D770004F8B2 /* LLCtlPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB327F128C20D770004F8B2 /* LLCtlPageView.swift */; };
 		ACB327FD28C20D770004F8B2 /* LLToolFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB327F228C20D770004F8B2 /* LLToolFunc.swift */; };
+		ACBEF9F529C83B5300E3A196 /* JJOrderConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEF9F329C83B5300E3A196 /* JJOrderConfirmViewController.swift */; };
+		ACBEF9F929C83CF100E3A196 /* JJPayStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEF9F729C83CF100E3A196 /* JJPayStyleCell.swift */; };
+		ACBEF9FA29C83CF100E3A196 /* JJPayStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBEF9F829C83CF100E3A196 /* JJPayStyleCell.xib */; };
+		ACBEFA0029C84A6100E3A196 /* OrderConfirmPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEF9FF29C84A6100E3A196 /* OrderConfirmPayView.swift */; };
+		ACBEFA0229C84A6D00E3A196 /* OrderConfirmPayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBEFA0129C84A6D00E3A196 /* OrderConfirmPayView.xib */; };
+		ACBEFA0529C84F9F00E3A196 /* JJPayProductInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEFA0329C84F9F00E3A196 /* JJPayProductInfoCell.swift */; };
+		ACBEFA0629C84F9F00E3A196 /* JJPayProductInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBEFA0429C84F9F00E3A196 /* JJPayProductInfoCell.xib */; };
 		ACF2428529AC698E00157112 /* JJSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2428329AC698E00157112 /* JJSignInViewController.swift */; };
 		ACF2428629AC698E00157112 /* JJSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF2428429AC698E00157112 /* JJSignInViewController.xib */; };
 		ACF2428929ACAA4800157112 /* WareProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2428729ACAA4800157112 /* WareProductViewController.swift */; };
@@ -214,6 +221,13 @@
 		ACB327F028C20D770004F8B2 /* LLContainerScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLContainerScrollView.swift; sourceTree = "<group>"; };
 		ACB327F128C20D770004F8B2 /* LLCtlPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLCtlPageView.swift; sourceTree = "<group>"; };
 		ACB327F228C20D770004F8B2 /* LLToolFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLToolFunc.swift; sourceTree = "<group>"; };
+		ACBEF9F329C83B5300E3A196 /* JJOrderConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJOrderConfirmViewController.swift; sourceTree = "<group>"; };
+		ACBEF9F729C83CF100E3A196 /* JJPayStyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJPayStyleCell.swift; sourceTree = "<group>"; };
+		ACBEF9F829C83CF100E3A196 /* JJPayStyleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JJPayStyleCell.xib; sourceTree = "<group>"; };
+		ACBEF9FF29C84A6100E3A196 /* OrderConfirmPayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmPayView.swift; sourceTree = "<group>"; };
+		ACBEFA0129C84A6D00E3A196 /* OrderConfirmPayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderConfirmPayView.xib; sourceTree = "<group>"; };
+		ACBEFA0329C84F9F00E3A196 /* JJPayProductInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJPayProductInfoCell.swift; sourceTree = "<group>"; };
+		ACBEFA0429C84F9F00E3A196 /* JJPayProductInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JJPayProductInfoCell.xib; sourceTree = "<group>"; };
 		ACF2428329AC698E00157112 /* JJSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJSignInViewController.swift; sourceTree = "<group>"; };
 		ACF2428429AC698E00157112 /* JJSignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JJSignInViewController.xib; sourceTree = "<group>"; };
 		ACF2428729ACAA4800157112 /* WareProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WareProductViewController.swift; sourceTree = "<group>"; };
@@ -401,6 +415,7 @@
 		ACAC67F5296EBD9400F6B846 /* tabbar_shop */ = {
 			isa = PBXGroup;
 			children = (
+				ACBEF9F229C83AFA00E3A196 /* pay */,
 				ACAC67F7296EBF1B00F6B846 /* JJShopViewController.swift */,
 			);
 			path = tabbar_shop;
@@ -636,6 +651,20 @@
 			path = LLPageView;
 			sourceTree = "<group>";
 		};
+		ACBEF9F229C83AFA00E3A196 /* pay */ = {
+			isa = PBXGroup;
+			children = (
+				ACBEF9F329C83B5300E3A196 /* JJOrderConfirmViewController.swift */,
+				ACBEF9F729C83CF100E3A196 /* JJPayStyleCell.swift */,
+				ACBEF9F829C83CF100E3A196 /* JJPayStyleCell.xib */,
+				ACBEFA0329C84F9F00E3A196 /* JJPayProductInfoCell.swift */,
+				ACBEFA0429C84F9F00E3A196 /* JJPayProductInfoCell.xib */,
+				ACBEF9FF29C84A6100E3A196 /* OrderConfirmPayView.swift */,
+				ACBEFA0129C84A6D00E3A196 /* OrderConfirmPayView.xib */,
+			);
+			path = pay;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -705,6 +734,7 @@
 				AC9F0D34296FA92E00CCC966 /* JJAddressCell.xib in Resources */,
 				ACACA9C928BEF4010006F495 /* LaunchScreen.storyboard in Resources */,
 				ACACA9EC28BF12BF0006F495 /* Localizable.strings in Resources */,
+				ACBEFA0629C84F9F00E3A196 /* JJPayProductInfoCell.xib in Resources */,
 				AC9B97D52989F4ED00806481 /* JJAboutUsViewController.xib in Resources */,
 				ACACA9C628BEF4010006F495 /* Assets.xcassets in Resources */,
 				ACACA9C428BEF4000006F495 /* Main.storyboard in Resources */,
@@ -712,6 +742,7 @@
 				AC9B97D129891CDA00806481 /* JJUnsubscribeViewController.xib in Resources */,
 				AC9B97AD29866AE600806481 /* UserItemACell.xib in Resources */,
 				AC81D932298B496E007E2B64 /* CouponCell.xib in Resources */,
+				ACBEF9FA29C83CF100E3A196 /* JJPayStyleCell.xib in Resources */,
 				AC9B97DC298A393E00806481 /* JJCooperationViewController.xib in Resources */,
 				AC92D7C2296FFDF900CE6CA9 /* JJLoginViewController.xib in Resources */,
 				AC9B97C92987BADA00806481 /* JJAddressPopView.xib in Resources */,
@@ -719,6 +750,7 @@
 				AC9B97B12986710400806481 /* UserItemBCell.xib in Resources */,
 				AC9B97A5298644DC00806481 /* VIPCell.xib in Resources */,
 				ACF2428A29ACAA4800157112 /* WareProductViewController.xib in Resources */,
+				ACBEFA0229C84A6D00E3A196 /* OrderConfirmPayView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,6 +815,7 @@
 				AC9B97B529875C3E00806481 /* JJOrderViewController.swift in Sources */,
 				ACB327FD28C20D770004F8B2 /* LLToolFunc.swift in Sources */,
 				A50823D629C7FAE100719C3A /* JJHomeTwoViewController.swift in Sources */,
+				ACBEFA0529C84F9F00E3A196 /* JJPayProductInfoCell.swift in Sources */,
 				ACACA9DB28BEFFD20006F495 /* JJUserViewController.swift in Sources */,
 				ACB327F728C20D770004F8B2 /* LLSegmentBaseItemView.swift in Sources */,
 				ACA66ED329A21E7900760589 /* HWAPI.swift in Sources */,
@@ -813,6 +846,7 @@
 				ACACA9C128BEF4000006F495 /* ViewController.swift in Sources */,
 				ACACA9BD28BEF4000006F495 /* AppDelegate.swift in Sources */,
 				ACB327F328C20D770004F8B2 /* LLSegmentItemTitleImageView.swift in Sources */,
+				ACBEF9F529C83B5300E3A196 /* JJOrderConfirmViewController.swift in Sources */,
 				AC9B97BD29876FFE00806481 /* UIDeviceExtension.swift in Sources */,
 				ACB327D328C04BEB0004F8B2 /* JJSettingViewController.swift in Sources */,
 				ACB327F628C20D770004F8B2 /* LLSegmentItemTitleView.swift in Sources */,
@@ -839,7 +873,9 @@
 				ACB327D828C052B70004F8B2 /* Toast.swift in Sources */,
 				AC9B97B72987655A00806481 /* OrderManagerViewController.swift in Sources */,
 				ACA66ED429A21E7900760589 /* HWMultipartData.swift in Sources */,
+				ACBEFA0029C84A6100E3A196 /* OrderConfirmPayView.swift in Sources */,
 				ACF2428929ACAA4800157112 /* WareProductViewController.swift in Sources */,
+				ACBEF9F929C83CF100E3A196 /* JJPayStyleCell.swift in Sources */,
 				ACACA9FC28BF59720006F495 /* FontFitSizeExtension.swift in Sources */,
 				ACB327F928C20D770004F8B2 /* LLIndicatorView.swift in Sources */,
 				ACACAA0E28BF5D9D0006F495 /* ThemeButton.swift in Sources */,
@@ -1004,11 +1040,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = AC2Q7KVX63;
+				DEVELOPMENT_TEAM = ABWG6HSMKY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XFileOne/sdk",
@@ -1075,7 +1109,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manghe.x1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = manghe_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "XFileOne/XFileOne-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1091,11 +1124,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ABWG6HSMKY;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = AC2Q7KVX63;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XFileOne/sdk",
@@ -1162,7 +1194,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manghe.x1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = manghe_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "XFileOne/XFileOne-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

@@ -237,22 +237,14 @@ class JJSignInViewController: BaseViewController {
         //开始数据请求
         print(postParmas)
         
-        #warning("sdk接入测试正常")
-        IndiaServer.getStart().regAndLogin(withThePhone: phone, code: code, password: password, model: (1 != 0)) { str1, str2 in
-            
-            
-            
-            
-        }
-        
-        
-        JJNetworkManager.API_POST(url: "login", postParmas: postParmas) { [weak self]Json in
-            JJUser.shared.initUser(json: Json)
-            JJManager.shared.login(userId: JJUser.shared.userid, sign: sign!)
-            JJToast.toast(content: "登录成功")
-            self?.dismiss(animated: true)
-        } fail: { msg in
-            
+        IndiaServer.getStart().regAndLogin(withThePhone: phone, code: code, password: password, model: (1 != 0)) { [weak self] userId, errMsg in
+            if userId != nil {
+                JJManager.shared.login(userId: userId!)
+                JJToast.toast(content: "登录成功")
+                self?.dismiss(animated: true)
+            }else {
+                JJToast.toast(content: errMsg ?? "")
+            }
         }
     }
     

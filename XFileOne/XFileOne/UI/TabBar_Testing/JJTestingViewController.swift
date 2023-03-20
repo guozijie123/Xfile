@@ -16,7 +16,7 @@ class JJTestingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "功能测试页面"
-        dataSource = ["设置语言","字体"]
+        dataSource = ["设置语言","字体","订单确认"]
 
         initSubViews()
     }
@@ -47,6 +47,8 @@ extension JJTestingViewController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(JJLanguageViewController(), animated: true)
         case 1:
             navigationController?.pushViewController(FontTestingViewController(), animated: true)
+        case 2:
+            navigationController?.pushViewController(JJOrderConfirmViewController(), animated: true)
         default:
             return
         }

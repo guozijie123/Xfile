@@ -156,6 +156,6 @@ extension JJUserViewController {
     func updateUserInfo() {
         let user = JJUser.shared
         self.userPhoneLabel.text = user.phone
-        self.userIdLabel.text = "ID：" + user.userid
+        self.userIdLabel.text = "ID：" + String(user.userid)
     }
 }

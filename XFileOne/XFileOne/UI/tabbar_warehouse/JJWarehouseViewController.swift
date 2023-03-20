@@ -12,11 +12,16 @@ class JJWarehouseViewController: BaseViewController {
     var tableView: UITableView!
     var currentButton:UIButton!
     
+    var page = 1     // 当前页数
+    var limit = 30   // 每页数量
+    var type = "0"   // 类型：0全部 1已兑换 2已提货 3已赠送
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "商品"
 
         initSubViews()
+        api_getList()
         // Do any additional setup after loading the view.
     }
     
@@ -102,5 +107,33 @@ extension JJWarehouseViewController: UITableViewDataSource, UITableViewDelegate 
 
 extension JJWarehouseViewController {
     
+    func api_getList() {
+        IndiaServer.getStart().getTheShopList(withUserid: JJManager.shared.userId, page: String(page), limit: String(limit), type: type) { [weak self] result, errMsg in
+            debugPrint("")
+        }
+    }
+    //请求仓库列表
+    /*
+     用户id
+     页数
+     数据条数
+     类型：0全部 1已兑换 2已提货 3已赠送
+     
+     返回类型数组 数组结构如下
+     
+     "id": 8, //id
+     "sku": "xxx.prize.com", //sku
+     "userid": 12, //用户id
+     "orderid": "SP202302240951530010028888", //订单id
+     "boxid": "aaaaa", //盒子id
+     "crtime": 1677203514, //中奖时间
+     "coin": 2000, //可兑换盲盒币
+     "title": "稀有电动车7", //名称
+     "type": 3, //类型 0全部 1已兑换 2提货 3赠送
+     "exchange": 1, //是否可以兑换   0否   1是
+     "img": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.alicdn.com%2Fbao%2Fupl" //图片
+     */
+
+
 
 }

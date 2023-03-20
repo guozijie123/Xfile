@@ -11,13 +11,21 @@ class JJUser: NSObject {
 
     static let shared = JJUser()
     
-    var userid: String = ""
-    var phone: String = ""
-    var img: String = ""
+    var userid = ""
+    var phone = ""
+    var img = ""
+    var address = ""
+    var ccode = ""
+    var coin = 0
+    var name = ""
     
-    func initUser(json: [String:Any]) {
-        self.userid = json["userid"] as! String
-        self.phone = json["phone"] as! String
-        self.img = json["img"] as! String
+    func initUser(json: [AnyHashable:Any]) {
+        self.userid = String(json[AnyHashable("id")] as? Int ?? 0)
+        self.phone = json[AnyHashable("phone")] as! String
+        self.img = json[AnyHashable("img")] as! String
+        self.address = json[AnyHashable("address")] as! String
+        self.ccode = json[AnyHashable("ccode")] as! String
+        self.name = json[AnyHashable("name")] as! String
+        self.coin = json[AnyHashable("coin")] as? Int  ?? 0
     }
 }
