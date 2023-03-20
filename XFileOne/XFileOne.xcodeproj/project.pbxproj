@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		298DA2E84F1B5E6C17E38394 /* Pods_XFileOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7974EDBDFB5E504904A06A98 /* Pods_XFileOne.framework */; };
+		A50823D629C7FAE100719C3A /* JJHomeTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50823D529C7FAE100719C3A /* JJHomeTwoViewController.swift */; };
 		A5E47D9329C4046E002D8FCD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E47D8E29C4046E002D8FCD /* FBSDKLoginKit.framework */; };
 		A5E47D9429C4046E002D8FCD /* IndiaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E47D8F29C4046E002D8FCD /* IndiaSDK.framework */; };
 		A5E47D9529C4046E002D8FCD /* FBAEMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E47D9029C4046E002D8FCD /* FBAEMKit.framework */; };
@@ -112,6 +113,7 @@
 		2C5410840B1CB07BE6568B1F /* Pods-XFileOne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFileOne.debug.xcconfig"; path = "Target Support Files/Pods-XFileOne/Pods-XFileOne.debug.xcconfig"; sourceTree = "<group>"; };
 		7974EDBDFB5E504904A06A98 /* Pods_XFileOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XFileOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5740B6092F739AF423521B /* Pods-XFileOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFileOne.release.xcconfig"; path = "Target Support Files/Pods-XFileOne/Pods-XFileOne.release.xcconfig"; sourceTree = "<group>"; };
+		A50823D529C7FAE100719C3A /* JJHomeTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJHomeTwoViewController.swift; sourceTree = "<group>"; };
 		A5E47D8E29C4046E002D8FCD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		A5E47D8F29C4046E002D8FCD /* IndiaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IndiaSDK.framework; sourceTree = "<group>"; };
 		A5E47D9029C4046E002D8FCD /* FBAEMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAEMKit.framework; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 			children = (
 				ACB327E028C101F60004F8B2 /* Views */,
 				ACACA9DC28BEFFDF0006F495 /* JJHomeViewController.swift */,
+				A50823D529C7FAE100719C3A /* JJHomeTwoViewController.swift */,
 			);
 			path = tabbar_home;
 			sourceTree = "<group>";
@@ -779,6 +782,7 @@
 				AC9B97C02987A3DC00806481 /* JJRecordViewController.swift in Sources */,
 				AC9B97B529875C3E00806481 /* JJOrderViewController.swift in Sources */,
 				ACB327FD28C20D770004F8B2 /* LLToolFunc.swift in Sources */,
+				A50823D629C7FAE100719C3A /* JJHomeTwoViewController.swift in Sources */,
 				ACACA9DB28BEFFD20006F495 /* JJUserViewController.swift in Sources */,
 				ACB327F728C20D770004F8B2 /* LLSegmentBaseItemView.swift in Sources */,
 				ACA66ED329A21E7900760589 /* HWAPI.swift in Sources */,

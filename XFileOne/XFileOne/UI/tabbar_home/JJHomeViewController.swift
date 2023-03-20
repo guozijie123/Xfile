@@ -55,6 +55,14 @@ class JJHomeViewController: BaseViewController,WKScriptMessageHandler,WKNavigati
         
         if message.name == "openView"{
             print("接收链接push打开下层页面来打开webview %@",message.body)
+            if let jsonString = message.body as? String,
+               let jsonData = jsonString.data(using: .utf8),
+               let dic = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as? [String: Any],
+               let url = (dic["param"] as? [String: Any])?["url"] as? String {
+               self.navigationController?.pushViewController(JJHomeTwoViewController(urlStr: url, urlTitle: "商品详情"), animated: true)
+            } else {
+                // Handle error
+            }
         }
         
     }
