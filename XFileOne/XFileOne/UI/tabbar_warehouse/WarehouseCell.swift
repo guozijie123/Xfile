@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class WarehouseCell: UITableViewCell {
     
@@ -20,6 +21,8 @@ class WarehouseCell: UITableViewCell {
     @IBOutlet weak var exchangeButton: UIButton!  // 兑换
     @IBOutlet weak var giftButton: UIButton!     // 赠送
     @IBOutlet weak var cancelButton: UIButton!   // 取消赠送
+    
+    var object: JJWareHouseModel!
     
     
     override func awakeFromNib() {
@@ -54,6 +57,36 @@ class WarehouseCell: UITableViewCell {
     @IBAction func pickupAction(_ sender: Any) {
     }
     @IBAction func cancelAction(_ sender: Any) {
+    }
+    
+    
+    func setProductModel(model: JJWareHouseModel) {
+        self.object = model
+        self.productTitle.text = model.title
+        self.productIcon.kf.setImage(with: URL(string: model.img))
+        setStatus(status: model.type)
+        
+        //请求仓库列表
+        /*
+         用户id
+         页数
+         数据条数
+         类型：0全部 1已兑换 2已提货 3已赠送
+         
+         返回类型数组 数组结构如下
+         
+         "id": 8, //id
+         "sku": "xxx.prize.com", //sku
+         "userid": 12, //用户id
+         "orderid": "SP202302240951530010028888", //订单id
+         "boxid": "aaaaa", //盒子id
+         "crtime": 1677203514, //中奖时间
+         "coin": 2000, //可兑换盲盒币
+         "title": "稀有电动车7", //名称
+         "type": 3, //类型 0全部 1已兑换 2提货 3赠送
+         "exchange": 1, //是否可以兑换   0否   1是
+         "img": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.alicdn.com%2Fbao%2Fupl" //图片
+         */
     }
     
     func setStatus(status: Int) {

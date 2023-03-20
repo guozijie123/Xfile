@@ -110,6 +110,7 @@
 		ACBEFA0229C84A6D00E3A196 /* OrderConfirmPayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBEFA0129C84A6D00E3A196 /* OrderConfirmPayView.xib */; };
 		ACBEFA0529C84F9F00E3A196 /* JJPayProductInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEFA0329C84F9F00E3A196 /* JJPayProductInfoCell.swift */; };
 		ACBEFA0629C84F9F00E3A196 /* JJPayProductInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBEFA0429C84F9F00E3A196 /* JJPayProductInfoCell.xib */; };
+		ACBEFA0929C8554A00E3A196 /* JJWareHouseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEFA0829C8554A00E3A196 /* JJWareHouseModel.swift */; };
 		ACF2428529AC698E00157112 /* JJSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2428329AC698E00157112 /* JJSignInViewController.swift */; };
 		ACF2428629AC698E00157112 /* JJSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF2428429AC698E00157112 /* JJSignInViewController.xib */; };
 		ACF2428929ACAA4800157112 /* WareProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2428729ACAA4800157112 /* WareProductViewController.swift */; };
@@ -228,6 +229,7 @@
 		ACBEFA0129C84A6D00E3A196 /* OrderConfirmPayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderConfirmPayView.xib; sourceTree = "<group>"; };
 		ACBEFA0329C84F9F00E3A196 /* JJPayProductInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJPayProductInfoCell.swift; sourceTree = "<group>"; };
 		ACBEFA0429C84F9F00E3A196 /* JJPayProductInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JJPayProductInfoCell.xib; sourceTree = "<group>"; };
+		ACBEFA0829C8554A00E3A196 /* JJWareHouseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJWareHouseModel.swift; sourceTree = "<group>"; };
 		ACF2428329AC698E00157112 /* JJSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJSignInViewController.swift; sourceTree = "<group>"; };
 		ACF2428429AC698E00157112 /* JJSignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JJSignInViewController.xib; sourceTree = "<group>"; };
 		ACF2428729ACAA4800157112 /* WareProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WareProductViewController.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 		ACAC67F6296EBDAD00F6B846 /* tabbar_warehouse */ = {
 			isa = PBXGroup;
 			children = (
+				ACBEFA0729C8550800E3A196 /* Model */,
 				ACAC67F9296EBF3A00F6B846 /* JJWarehouseViewController.swift */,
 				ACA66EDB29A28B4200760589 /* WarehouseCell.swift */,
 				ACA66EDC29A28B4200760589 /* WarehouseCell.xib */,
@@ -665,6 +668,14 @@
 			path = pay;
 			sourceTree = "<group>";
 		};
+		ACBEFA0729C8550800E3A196 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACBEFA0829C8554A00E3A196 /* JJWareHouseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -828,6 +839,7 @@
 				ACA66ED629A21E7900760589 /* HWNetworking.swift in Sources */,
 				AC25E53C299BCF550089B79B /* JJWebViewController.swift in Sources */,
 				AC9B97AC29866AE600806481 /* UserItemACell.swift in Sources */,
+				ACBEFA0929C8554A00E3A196 /* JJWareHouseModel.swift in Sources */,
 				ACB327F828C20D770004F8B2 /* LLSegmentedControl.swift in Sources */,
 				AC92D7C1296FFDF900CE6CA9 /* JJLoginViewController.swift in Sources */,
 				ACB327FB28C20D770004F8B2 /* LLContainerScrollView.swift in Sources */,

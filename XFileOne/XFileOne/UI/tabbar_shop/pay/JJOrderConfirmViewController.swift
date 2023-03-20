@@ -10,7 +10,6 @@ import UIKit
 class JJOrderConfirmViewController: BaseViewController {
 
     var tableView: UITableView!
-    var headerView: OrderConfirmHeaderView!
     var bottomView: OrderConfirmPayView!
     
     override func viewDidLoad() {
