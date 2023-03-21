@@ -15,7 +15,7 @@ class ShopListViewController: BaseViewController {
     
     var page = 1     // 当前页数
     var limit = 30   // 每页数量
-    var type = "0"   // 类型：0全部 1已兑换 2已提货 3已赠送
+    var type = 0   // 类型：0全部 1已兑换 2已提货 3已赠送
     var dataSources: [JJWareHouseModel] = []
     
     override func viewDidLoad() {
@@ -91,9 +91,10 @@ class ShopListViewController: BaseViewController {
             currentButton = sender
             currentButton.isSelected = true
         }
+        let type = sender.tag - 300
+        switchType(typeNum: type)
     }
-    deinit {
-    }
+
 
 }
 
@@ -123,9 +124,16 @@ extension ShopListViewController {
     
 
     
+    /// 切换类型
+    /// - Parameter typeNum: 类型 0全部 1已兑换 2提货 3赠送
+    func switchType(typeNum: Int) {
+        self.type = typeNum
+        api_getList(pageNum: 1)
+    }
+    
     func api_getList(pageNum: Int) {
         self.page = pageNum
-        IndiaServer.getStart().getTheShopList(withUserid: JJManager.shared.userId, page: String(page), limit: String(limit), type: type) { [weak self] result, errMsg in
+        IndiaServer.getStart().getTheShopList(withUserid: JJManager.shared.userId, page: String(page), limit: String(limit), type: String(type)) { [weak self] result, errMsg in
             self?.tableView.mj_header?.endRefreshing()
             if result != nil {
                 let list = result! as [Any]

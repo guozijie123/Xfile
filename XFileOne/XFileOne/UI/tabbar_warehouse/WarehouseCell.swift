@@ -64,7 +64,41 @@ class WarehouseCell: UITableViewCell {
         self.object = model
         self.productTitle.text = model.title
         self.productIcon.kf.setImage(with: URL(string: model.img))
-        setStatus(status: model.type)
+        
+        switch model.type {
+        case 0: // 全部
+            self.statusLabel.isHidden = true
+            self.cancelButton.isHidden = true
+            self.buttonStackView.isHidden = false
+            self.label3.isHidden = true
+        case 1: // 已兑换
+            self.statusLabel.isHidden = false
+            self.statusLabel.text = "已兑换"
+            self.cancelButton.isHidden = true
+            self.buttonStackView.isHidden = true
+            self.label3.isHidden = false
+            self.label3.text = "实付：xxx"
+        case 2: // 已提货
+            self.statusLabel.isHidden = true
+            self.cancelButton.isHidden = true
+            self.buttonStackView.isHidden = true
+            self.label3.isHidden = false
+            self.label3.text = "提货时间：xxxxxx"
+        case 3: // 已赠送
+            self.statusLabel.isHidden = false
+            self.statusLabel.text = "已赠送"
+            self.cancelButton.isHidden = false
+            self.buttonStackView.isHidden = true
+            self.label3.isHidden = true
+            
+        default:
+            self.statusLabel.isHidden = true
+            self.cancelButton.isHidden = true
+            self.buttonStackView.isHidden = true
+            self.label3.isHidden = true
+            
+            break
+        }
         
         //请求仓库列表
         /*
