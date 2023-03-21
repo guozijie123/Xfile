@@ -48,7 +48,7 @@ extension JJTestingViewController: UITableViewDataSource, UITableViewDelegate {
         case 1:
             navigationController?.pushViewController(FontTestingViewController(), animated: true)
         case 2:
-            navigationController?.pushViewController(JJOrderConfirmViewController(), animated: true)
+            navigationController?.pushViewController(JJOrderConfirmViewController(boxid: "1111"), animated: true)
         default:
             return
         }

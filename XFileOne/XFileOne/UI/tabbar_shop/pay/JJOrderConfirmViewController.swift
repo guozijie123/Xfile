@@ -11,6 +11,24 @@ class JJOrderConfirmViewController: BaseViewController {
 
     var tableView: UITableView!
     var bottomView: OrderConfirmPayView!
+    var boxid: String? // boxid
+    
+    
+    var amount: String? //金额
+    var detail: String? //描述
+    var boxTitle: String? //名称
+    var img: String? //盒子图片
+    var couponDetail: Array<Any>? //优惠券列表
+    var couponAmount: String? //优惠价格
+    
+    required init(boxid: String) {
+        self.boxid = boxid
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,35 +42,50 @@ class JJOrderConfirmViewController: BaseViewController {
         
 
         bottomView = (UINib(nibName: "OrderConfirmPayView", bundle: nil).instantiate(withOwner: nil).first as! OrderConfirmPayView)
+        bottomView.payButton.addTarget(self, action:#selector(payButtonAction) , for: .touchUpInside)
         view.addSubview(bottomView)
         bottomView.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
             make.height.equalTo(Tools.kScaleUI(size: 150))
         }
         
-        tableView = UITableView(frame: .zero, style: .plain)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.backgroundColor = .clear
-        tableView.showsVerticalScrollIndicator = false
-        tableView.separatorStyle = .none
-        tableView.register(UINib(nibName: "JJPayProductInfoCell", bundle: nil), forCellReuseIdentifier: "JJPayProductInfoCell")
-        tableView.register(UINib(nibName: "JJPayStyleCell", bundle: nil), forCellReuseIdentifier: "JJPayStyleCell")
-        view.addSubview(tableView)
-        tableView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(15)
-            make.left.equalToSuperview().offset(15)
-            make.right.equalToSuperview().offset(-15)
-            make.bottom.equalTo(bottomView.snp.top)
+        
+        print("%@",JJManager.shared.userId);
+        IndiaServer.getStart().getThePayDetail(with: self.boxid, userid: JJManager.shared.userId) { result, error in
+            
+            print("%@",result ?? "~~~~")
+            if (result != nil){
+                self.amount = result?["amount"] as? String
+                self.detail = result?["introduce"] as? String
+                self.boxTitle = result?["title"] as? String
+                self.img = result?["img"] as? String
+                
+                if let arr = result?["couponList"] as? [Any], let dict = arr.first as? [String: Any], let discount = dict["discount"] as? String {
+                    self.couponAmount = discount
+                    // Do something with str
+                }
+                self.tableView = UITableView(frame: .zero, style: .plain)
+                self.tableView.delegate = self
+                self.tableView.dataSource = self
+                self.tableView.backgroundColor = .clear
+                self.tableView.showsVerticalScrollIndicator = false
+                self.tableView.separatorStyle = .none
+                self.tableView.register(UINib(nibName: "JJPayProductInfoCell", bundle: nil), forCellReuseIdentifier: "JJPayProductInfoCell")
+                self.tableView.register(UINib(nibName: "JJPayStyleCell", bundle: nil), forCellReuseIdentifier: "JJPayStyleCell")
+                self.view.addSubview(self.tableView)
+                self.tableView.snp.makeConstraints { make in
+                    make.top.equalToSuperview().offset(15)
+                    make.left.equalToSuperview().offset(15)
+                    make.right.equalToSuperview().offset(-15)
+                    make.bottom.equalTo(self.bottomView.snp.top)
 
+                }
+                
+            }
+            
+            
         }
         
-
-//        let vie = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height:  Tools.kScaleUI(size: 292)))
-//        vie.backgroundColor = UIColor.red
-//
-//        headerView = ((UINib(nibName: "OrderConfirmHeaderView", bundle: nil).instantiate(withOwner: nil).first) as! OrderConfirmHeaderView)
-//        tableView.tableHeaderView = headerView
     }
     
 }
@@ -69,6 +102,13 @@ extension JJOrderConfirmViewController: UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "JJPayProductInfoCell", for: indexPath) as! JJPayProductInfoCell
+            cell.buy_count.text = "1"
+            cell.buy_discounts.text = self.couponAmount
+            cell.productName.text = self.boxTitle
+            cell.productPrice.text = self.amount
+            let amount = self.amount!
+            let discount = self.couponAmount!
+            cell.total.text = String(Int(amount)! - Int(discount)!)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "JJPayStyleCell", for: indexPath) as! JJPayStyleCell
@@ -83,5 +123,11 @@ extension JJOrderConfirmViewController: UITableViewDataSource, UITableViewDelega
         
     }
 
+    @objc func payButtonAction(){
+        
+        print("前往购买")
+        
+    }
+    
     
 }

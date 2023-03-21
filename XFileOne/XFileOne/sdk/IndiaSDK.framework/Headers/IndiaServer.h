@@ -142,4 +142,28 @@
  */
 -(void)exchangeGoldCoinWithUserid:(NSString *)userid thingID:(NSString *)thingid withBlock:(void(^)(BOOL isSuccess,NSString * errorInfo))block;
 
+//获取下单信息
+/*
+ "data": {
+ "boxid": "aaaaa", //盒子id
+ "amount": "49.90", //盒子单价
+ "title": "超级大盲盒", //盒子标题
+ "introduce": "每5发保底笔触稀有/史诗/传说", //盒子描述
+ "img": "http://open.saintic.com/api/bingPic/?picSize=2", //盒子图片
+ "couponList": [
+ {
+ "title": "无门槛30元优惠券", //优惠券标题
+ "couponid": "yyyyy", //优惠券编号
+ "discount": 30, //折扣金额
+ "exptime": 1675934928 //过期时间，后端已经过滤，此字段只用于展示
+ },
+ {
+ "title": "无门槛20元优惠券", //优惠券标题
+ "couponid": "xxxxx", //优惠券编号
+ "discount": 20, //折扣金额
+ "exptime": 1675934928 //过期时间，后端已经过滤，此字段只用于展示
+ }
+ */
+-(void)getThePayDetailWith:(NSString *)boxid userid:(NSString *)userid withBlock:(void(^)(NSDictionary * result,NSString * errorInfo))block;
+
 @end

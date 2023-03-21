@@ -16,40 +16,86 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "251"
             endingLineNumber = "251"
-            landmarkName = "accountSigninAction()"
+            landmarkName = "phoneSigninAction()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D977265E-ABED-4EF6-866E-B3C1CC2FB209"
+            uuid = "CDAE4045-4DF5-42E4-993C-F539A981CA82"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "XFileOne/UI/tabbar_home/JJHomeTwoViewController.swift"
+            filePath = "XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "userContentController(_:didReceive:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "initSubViews()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8C5A1424-A7F5-44C9-B989-9A2B640A46EA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "XFileOne/UI/tabbar_home/JJHomeTwoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "userContentController(_:didReceive:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CDAE4045-4DF5-42E4-993C-F539A981CA82 - 84598660946f2b74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in XFileOne.JJOrderConfirmViewController.initSubViews() -&gt; ()"
+                  moduleName = "XFileOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/douglas/Documents/GitHub/Xfile/XFileOne/XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "2108">
+               </Location>
+               <Location
+                  uuid = "CDAE4045-4DF5-42E4-993C-F539A981CA82 - 84598660946f2b74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in XFileOne.JJOrderConfirmViewController.initSubViews() -&gt; ()"
+                  moduleName = "XFileOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/douglas/Documents/GitHub/Xfile/XFileOne/XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "2444">
+               </Location>
+               <Location
+                  uuid = "CDAE4045-4DF5-42E4-993C-F539A981CA82 - 84598660946f2b74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in XFileOne.JJOrderConfirmViewController.initSubViews() -&gt; ()"
+                  moduleName = "XFileOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/douglas/Documents/GitHub/Xfile/XFileOne/XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "2668">
+               </Location>
+               <Location
+                  uuid = "CDAE4045-4DF5-42E4-993C-F539A981CA82 - 84598660946f2b74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in XFileOne.JJOrderConfirmViewController.initSubViews() -&gt; ()"
+                  moduleName = "XFileOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/douglas/Documents/GitHub/Xfile/XFileOne/XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "2964">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

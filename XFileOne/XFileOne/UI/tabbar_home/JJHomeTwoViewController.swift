@@ -84,7 +84,7 @@ class JJHomeTwoViewController: BaseViewController,WKScriptMessageHandler,WKNavig
                let dic = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as? [String: Any],
                let boxid = (dic["param"] as? [String: Any])?["id"] as? String {
                print("%@",boxid)
-               #warning("根据返回的id跳转到购买页面，利用boxid来请求所有支付信息，然后点击支付调起")
+               self.navigationController?.pushViewController(JJOrderConfirmViewController(boxid: boxid), animated: true)
             } else {
                 // Handle error
             }
