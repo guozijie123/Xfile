@@ -25,6 +25,7 @@ targetsArray.each do |t|
         pod 'IQKeyboardManagerSwift', '~> 6.5'
         #FB 动画库
         pod 'pop'
+        pod 'MJRefresh'
         end
 
 end

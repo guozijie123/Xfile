@@ -9,121 +9,103 @@ import UIKit
 
 class JJWarehouseViewController: BaseViewController {
 
-    var tableView: UITableView!
-    var currentButton:UIButton!
     
-    var page = 1     // 当前页数
-    var limit = 30   // 每页数量
-    var type = "0"   // 类型：0全部 1已兑换 2已提货 3已赠送
+    var shopButton:UIButton!  // 商品
+    var boxButton:UIButton!  // 盒子
+    var switchButton:UIButton!  // 识别： 商品、盒子
+    var animationLine:UIView!
+    var scrollView:UIScrollView!
+    var shopListVC: ShopListViewController!
+    var boxListVC: BoxListViewController!
     
-    var dataSources: [JJWareHouseModel] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "商品"
 
         initSubViews()
-        api_getList()
+//        api_getList()
         // Do any additional setup after loading the view.
+    }
+    override func viewDidLayoutSubviews() {
+        shopListVC.view.frame = CGRect(x: 0, y: 0, width: Tools.kScreenWidth(), height: scrollView.height)
+        boxListVC.view.frame = CGRect(x: Tools.kScreenWidth(), y: 0, width: Tools.kScreenWidth(), height: scrollView.height)
     }
     
     override func initSubViews() {
         self.view.backgroundColor = UIColor.kRGB(R: 230, G: 240, B: 247)
         
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.alignment = .fill
-        stackView.distribution = .fillEqually
-        stackView.backgroundColor = .clear
-        stackView.spacing = 15
-        stackView.frame = CGRect(x: 16, y: 16, width: UIScreen.main.bounds.size.width - 32, height: Tools.kScaleUI(size: 28))
-        view.addSubview(stackView)
+        let navView = UIView(frame: CGRect(x: 20, y: 0, width: Tools.kScreenWidth()*0.7, height: 44))
+        navView.backgroundColor = .white
+       
         
-        let titleList = ["全部","已兑换","已提货","已赠送"]
-        for i in 0 ..< titleList.count {
-            let btn = UIButton()
-            btn.titleLabel?.font = UIFont.Medium(size: 13)
-            btn.setTitleColor(.white, for: .normal)
-            btn.frame = CGRect(x: 0, y: 0, width: Tools.kScaleUI(size: 72), height: Tools.kScaleUI(size: 28))
-            btn.setBackgroundImage(UIImage(named: "ware_btn_bg_sel"), for: .selected)
-            btn.setBackgroundImage(UIImage(named: "ware_btn_bg_nor"), for: .normal)
-            btn.tag = 300 + i
-            btn.setTitle(titleList[i], for: UIControl.State.normal)
-            btn.addTarget(self, action: #selector(changeStatus(sender:)), for: .touchUpInside)
-            stackView.addArrangedSubview(btn)
-            if i == 0 {
-                btn.isSelected = true
-                currentButton = btn
-            }
+        let shopButton = UIButton(type: .custom)
+        shopButton.setTitle("商品", for: .normal)
+        shopButton.titleLabel?.font = UIFont.Medium(size: 15)
+        shopButton.setTitleColor(UIColor.kColor(RGB: 56), for: .normal)
+        shopButton.frame = CGRect(x: 0, y: 0, width: 60, height: 44)
+        shopButton.addTarget(self, action: #selector(switchType), for: .touchUpInside)
+        
+        let boxButton = UIButton(type: .custom)
+        boxButton.setTitle("盒子", for: .normal)
+        boxButton.titleLabel?.font = UIFont.Medium(size: 15)
+        boxButton.setTitleColor(UIColor.kColor(RGB: 56), for: .normal)
+        boxButton.frame = CGRect(x: navView.width - 80, y: 0, width: 60, height: 44)
+        boxButton.addTarget(self, action: #selector(switchType), for: .touchUpInside)
+        
+        navView.addSubview(shopButton)
+        navView.addSubview(boxButton)
+        
+        let animationLine = UIView()
+        animationLine.backgroundColor = UIColor.kColor(RGB: 56)
+        animationLine.frame = CGRect(x: 0, y: 42, width: 54, height: 2)
+        animationLine.centerX = shopButton.centerX
+        navView.addSubview(animationLine)
+        
+        self.animationLine = animationLine
+        self.shopButton = shopButton
+        self.boxButton = boxButton
+        self.switchButton = shopButton
+        
+        self.navigationItem.titleView = navView
+        
+        
+        
+        scrollView = UIScrollView()
+        scrollView.contentSize = CGSize(width: Tools.kScreenWidth() * 2, height: 0)
+        scrollView.bounces = false
+        scrollView.isPagingEnabled = true
+        scrollView.isScrollEnabled = false
+        scrollView.showsHorizontalScrollIndicator = false
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
         
+        shopListVC = ShopListViewController()
+        self.addChild(shopListVC)
+        scrollView.addSubview(shopListVC.view)
         
         
-        
-        tableView = UITableView(frame: .zero, style: .plain)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.backgroundColor = .clear
-        tableView.showsVerticalScrollIndicator = false
-        tableView.separatorStyle = .none
-        tableView.register(UINib(nibName: "WarehouseCell", bundle: nil), forCellReuseIdentifier: "WarehouseCell")
-        view.addSubview(tableView)
-        tableView.snp.makeConstraints { make in
-            make.right.left.bottom.equalToSuperview()
-            make.top.equalTo(stackView.snp.bottom).offset(8)
-        }
-        
+        boxListVC = BoxListViewController()
+        self.addChild(boxListVC)
+        scrollView.addSubview(boxListVC.view)
     }
     
-    @objc func changeStatus(sender: UIButton) {
-        if sender != currentButton {
-            currentButton.isSelected = false
-            currentButton = sender
-            currentButton.isSelected = true
+    @objc func switchType(btn: UIButton) {
+        if switchButton == btn {
+            return
+        }
+        switchButton = btn
+        
+        
+        scrollView.setContentOffset(CGPoint(x: switchButton == shopButton ? 0 : Tools.kScreenWidth() , y: 0), animated: true)
+        
+        UIView.animate(withDuration: 0.25) {
+            self.animationLine.centerX = self.switchButton.centerX
         }
     }
+    
 
 }
 
-extension JJWarehouseViewController: UITableViewDataSource, UITableViewDelegate {
-
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.dataSources.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WarehouseCell", for: indexPath) as! WarehouseCell
-        cell.setProductModel(model: self.dataSources[indexPath.row])
-        return cell
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        Tools.kScaleUI(size: 133)
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-        
-    }
-
-    
-}
-
-extension JJWarehouseViewController {
-    
-    func api_getList() {
-        IndiaServer.getStart().getTheShopList(withUserid: JJManager.shared.userId, page: String(page), limit: String(limit), type: type) { [weak self] result, errMsg in
-            if result != nil {
-                let list = result! as [Any]
-                
-                for json in list {
-                    let obj = JJWareHouseModel.initWithJson(json: json as! [String : Any])
-                    self?.dataSources.append(obj)
-                }
-                self?.tableView.reloadData()
-            }
-        }
-    }
-
-
-
-
-}

@@ -10,6 +10,9 @@ import UIKit
 class VIPCell: UITableViewCell {
 
     @IBOutlet weak var view1: UIView! //Vip 背景
+    @IBOutlet weak var coin: UILabel!
+    
+    @IBOutlet weak var vipButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,4 +40,8 @@ class VIPCell: UITableViewCell {
         }
     }
     
+    // 开通VIP
+    @IBAction func vipChannel(_ sender: Any) {
+        JJToast.toast(content: "开通VIP")
+    }
 }

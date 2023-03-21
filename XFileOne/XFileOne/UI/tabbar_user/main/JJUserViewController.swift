@@ -107,7 +107,8 @@ extension JJUserViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch (indexPath.section)  {
         case 0:
-            let VIPCell = tableView.dequeueReusableCell(withIdentifier: "VIPCell", for: indexPath)
+            let VIPCell = tableView.dequeueReusableCell(withIdentifier: "VIPCell", for: indexPath) as! VIPCell
+            VIPCell.coin.text = String(JJUser.shared.coin)
             return VIPCell
         case 1:
             let OrderCell = tableView.dequeueReusableCell(withIdentifier: "OrderCell", for: indexPath)
@@ -157,5 +158,9 @@ extension JJUserViewController {
         let user = JJUser.shared
         self.userPhoneLabel.text = user.phone
         self.userIdLabel.text = "ID：" + String(user.userid)
+        
+        if (self.tableView != nil) {
+            self.tableView.reloadData()
+        }
     }
 }

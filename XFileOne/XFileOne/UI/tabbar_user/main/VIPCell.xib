@@ -28,6 +28,9 @@
                                 <state key="normal" title="立即开通" backgroundImage="user_pay_bg">
                                     <color key="titleColor" red="0.90588235294117647" green="0.81960784313725488" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="vipChannel:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KnI-Wx-kU9"/>
+                                </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPJ-C8-8Rv">
                                 <rect key="frame" x="0.0" y="23.666666666666668" width="224" height="1"/>
@@ -115,7 +118,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="coin" destination="IoU-Dh-p9A" id="j7g-Fu-f1o"/>
                 <outlet property="view1" destination="Dz0-5b-Z3n" id="7P2-Py-I9u"/>
+                <outlet property="vipButton" destination="oIC-pB-W26" id="k53-5R-elu"/>
             </connections>
             <point key="canvasLocation" x="100.76335877862596" y="21.126760563380284"/>
         </tableViewCell>
