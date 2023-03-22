@@ -41,9 +41,6 @@ class JJOrderConfirmViewController: BaseViewController {
         bottomView = (UINib(nibName: "OrderConfirmPayView", bundle: nil).instantiate(withOwner: nil).first as! OrderConfirmPayView)
         bottomView.payButton.addTarget(self, action:#selector(payButtonAction) , for: .touchUpInside)
         view.addSubview(bottomView)
-        if let model = self.detailModel {
-            bottomView.setPayDetail(model: model)
-        }
         bottomView.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
             make.height.equalTo(Tools.kScaleUI(size: 150))
@@ -107,6 +104,27 @@ extension JJOrderConfirmViewController {
     @objc func payButtonAction(){
         
         print("前往购买")
+        /*
+         购买金额
+         实际支付金额
+         优惠券id
+         用户ID
+         渠道id
+         盒子id
+         数量
+         
+         */
+        IndiaServer.getStart().pushTheAmount(self.detailModel?.amount, payAmount: self.detailModel?.payAmount, couponid: self.detailModel?.couponList.first?.couponid, userid: JJUser.shared.userid, channelId: "1", boxid: self.detailModel?.boxid, count: "1") { payUrl, payOrder, error in
+            
+            
+            if payUrl != nil{
+                self.navigationController?.pushViewController(JJWebViewController(urlStr: payUrl ?? "", urlTitle: "订单支付"), animated: true)
+            }
+            
+            
+        }
+        
+        
         
     }
     
@@ -115,7 +133,7 @@ extension JJOrderConfirmViewController {
             if (result != nil){
                 let model = payConfirmModel.initWithJson(json: result ?? [:])
                 self?.detailModel = model
-                self?.bottomView.total.text = model.amount
+                self?.bottomView.total.text = self?.detailModel?.payAmount
                 self?.tableView.reloadData()
             }
         }

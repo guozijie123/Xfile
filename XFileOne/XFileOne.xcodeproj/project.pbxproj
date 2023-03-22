@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		298DA2E84F1B5E6C17E38394 /* Pods_XFileOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7974EDBDFB5E504904A06A98 /* Pods_XFileOne.framework */; };
 		A50823D629C7FAE100719C3A /* JJHomeTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50823D529C7FAE100719C3A /* JJHomeTwoViewController.swift */; };
+		A56C62D729CADE050006E982 /* JJopenBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C62D629CADE050006E982 /* JJopenBoxViewController.swift */; };
 		A5E47D9329C4046E002D8FCD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E47D8E29C4046E002D8FCD /* FBSDKLoginKit.framework */; };
 		A5E47D9429C4046E002D8FCD /* IndiaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E47D8F29C4046E002D8FCD /* IndiaSDK.framework */; };
 		A5E47D9529C4046E002D8FCD /* FBAEMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E47D9029C4046E002D8FCD /* FBAEMKit.framework */; };
@@ -126,6 +127,7 @@
 		7974EDBDFB5E504904A06A98 /* Pods_XFileOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XFileOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5740B6092F739AF423521B /* Pods-XFileOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFileOne.release.xcconfig"; path = "Target Support Files/Pods-XFileOne/Pods-XFileOne.release.xcconfig"; sourceTree = "<group>"; };
 		A50823D529C7FAE100719C3A /* JJHomeTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJHomeTwoViewController.swift; sourceTree = "<group>"; };
+		A56C62D629CADE050006E982 /* JJopenBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJopenBoxViewController.swift; sourceTree = "<group>"; };
 		A5E47D8E29C4046E002D8FCD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		A5E47D8F29C4046E002D8FCD /* IndiaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IndiaSDK.framework; sourceTree = "<group>"; };
 		A5E47D9029C4046E002D8FCD /* FBAEMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAEMKit.framework; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				AC25E53B299BCF550089B79B /* JJWebViewController.swift */,
+				A56C62D629CADE050006E982 /* JJopenBoxViewController.swift */,
 			);
 			path = webView;
 			sourceTree = "<group>";
@@ -844,6 +847,7 @@
 				ACACAA1028BF5D9D0006F495 /* UIcolor+extension.swift in Sources */,
 				AC9B97C02987A3DC00806481 /* JJRecordViewController.swift in Sources */,
 				AC9B97B529875C3E00806481 /* JJOrderViewController.swift in Sources */,
+				A56C62D729CADE050006E982 /* JJopenBoxViewController.swift in Sources */,
 				ACB327FD28C20D770004F8B2 /* LLToolFunc.swift in Sources */,
 				A50823D629C7FAE100719C3A /* JJHomeTwoViewController.swift in Sources */,
 				ACBEFA0529C84F9F00E3A196 /* JJPayProductInfoCell.swift in Sources */,

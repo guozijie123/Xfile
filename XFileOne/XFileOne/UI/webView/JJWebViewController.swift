@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class JJWebViewController: BaseViewController{
+class JJWebViewController: BaseViewController,WKScriptMessageHandler,WKNavigationDelegate,WKUIDelegate{
     
     
     
@@ -47,8 +47,7 @@ class JJWebViewController: BaseViewController{
         let configuration = WKWebViewConfiguration()
         configuration.userContentController = WKUserContentController()
         let webView = WKWebView(frame: self.view.frame, configuration: configuration)
-        
-        
+        configuration.userContentController.add(self, name: "openView")
         webView.scrollView.bounces = true
         webView.scrollView.alwaysBounceVertical = true
         view.addSubview(webView)
@@ -69,7 +68,24 @@ class JJWebViewController: BaseViewController{
     }
     
     
-    
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        
+        if message.name == "openView"{
+
+            if let jsonString = message.body as? String,
+               let jsonData = jsonString.data(using: .utf8),
+               let dic = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as? [String: Any],
+               let url = (dic["param"] as? [String: Any])?["url"] as? String {
+                self.navigationController?.pushViewController(JJopenBoxViewController(urlStr: url, urlTitle: "开盒大吉"), animated: true)
+                
+                #warning("来到这里整个支付流程结束，上层页面要回到仓库列表，不是一层一层返回")
+                
+            } else {
+                // Handle error
+            }
+        }
+        
+    }
     
     
 }

@@ -14,6 +14,7 @@ class payConfirmModel: NSObject {
     var img = ""
     var title = ""
     var amount = ""
+    var payAmount = "" //实际支付金额
     
     static func initWithJson(json: [AnyHashable:Any]) -> payConfirmModel {
         let obj = payConfirmModel()
@@ -27,7 +28,13 @@ class payConfirmModel: NSObject {
         for couponJson in list {
             obj.couponList.append(payCouponModel.initWithJson(json: couponJson as! [String : Any]))
         }
-        
+        if !obj.couponList.isEmpty {
+            let stringToInt:Double = Double(Double(obj.amount)! - Double(obj.couponList.first!.discount))
+            obj.payAmount = String(stringToInt)
+        }else{
+            obj.payAmount = json[AnyHashable("amount")] as? String ?? ""
+        }
+       
         return obj
     }
     
