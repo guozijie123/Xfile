@@ -30,72 +30,42 @@
             filePath = "XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "initSubViews()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CDAE4045-4DF5-42E4-993C-F539A981CA82 - 84598660946f2b74"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in XFileOne.JJOrderConfirmViewController.initSubViews() -&gt; ()"
-                  moduleName = "XFileOne"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/douglas/Documents/GitHub/Xfile/XFileOne/XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "2108">
-               </Location>
-               <Location
-                  uuid = "CDAE4045-4DF5-42E4-993C-F539A981CA82 - 84598660946f2b74"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in XFileOne.JJOrderConfirmViewController.initSubViews() -&gt; ()"
-                  moduleName = "XFileOne"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/douglas/Documents/GitHub/Xfile/XFileOne/XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "2444">
-               </Location>
-               <Location
-                  uuid = "CDAE4045-4DF5-42E4-993C-F539A981CA82 - 84598660946f2b74"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in XFileOne.JJOrderConfirmViewController.initSubViews() -&gt; ()"
-                  moduleName = "XFileOne"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/douglas/Documents/GitHub/Xfile/XFileOne/XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "2668">
-               </Location>
-               <Location
-                  uuid = "CDAE4045-4DF5-42E4-993C-F539A981CA82 - 84598660946f2b74"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in XFileOne.JJOrderConfirmViewController.initSubViews() -&gt; ()"
-                  moduleName = "XFileOne"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/douglas/Documents/GitHub/Xfile/XFileOne/XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "2964">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2643A4E-21CF-42C7-8272-93D675728A31"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XFileOne/UI/tabbar_shop/pay/model/payConfirmModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "initWithJson(json:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA5296D3-202E-40E3-BB38-0FA73C37EFA5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XFileOne/UI/tabbar_shop/pay/JJPayProductInfoCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "setPayDetail(model:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

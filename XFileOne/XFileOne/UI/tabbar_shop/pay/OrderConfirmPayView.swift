@@ -35,7 +35,10 @@ class OrderConfirmPayView: UIView {
    
     }
 
-    
+    func setPayDetail(model: payConfirmModel) {
+        let stringToInt:Double = Double(Double(model.amount)! - Double(model.couponList.first!.discount))
+        self.total.text = String(stringToInt)
+    }
 
     
     

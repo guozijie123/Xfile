@@ -41,6 +41,9 @@ class JJOrderConfirmViewController: BaseViewController {
         bottomView = (UINib(nibName: "OrderConfirmPayView", bundle: nil).instantiate(withOwner: nil).first as! OrderConfirmPayView)
         bottomView.payButton.addTarget(self, action:#selector(payButtonAction) , for: .touchUpInside)
         view.addSubview(bottomView)
+        if let model = self.detailModel {
+            bottomView.setPayDetail(model: model)
+        }
         bottomView.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
             make.height.equalTo(Tools.kScaleUI(size: 150))
