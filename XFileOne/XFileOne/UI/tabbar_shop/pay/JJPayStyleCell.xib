@@ -21,14 +21,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ph1-Vi-dZU">
                         <rect key="frame" x="0.0" y="0.0" width="473" height="102"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z0C-tb-9Gl">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="payIcon_ali" translatesAutoresizingMaskIntoConstraints="NO" id="Z0C-tb-9Gl">
                                 <rect key="frame" x="12" y="41" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="NWE-nO-CId"/>
                                     <constraint firstAttribute="width" constant="20" id="r7o-YS-Yzb"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U95-tA-dnw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pay_selected" translatesAutoresizingMaskIntoConstraints="NO" id="U95-tA-dnw">
                                 <rect key="frame" x="438" y="41" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="D40-Qo-Vvc"/>
@@ -70,6 +70,8 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="payIcon_ali" width="20" height="20.5"/>
+        <image name="pay_selected" width="16.5" height="16.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

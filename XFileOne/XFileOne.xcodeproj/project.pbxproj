@@ -114,6 +114,7 @@
 		ACBEFA0B29C944A700E3A196 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEFA0A29C944A700E3A196 /* ShopListViewController.swift */; };
 		ACBEFA0D29C944B300E3A196 /* BoxListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEFA0C29C944B300E3A196 /* BoxListViewController.swift */; };
 		ACBEFA0F29C94AD700E3A196 /* JJBoxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEFA0E29C94AD700E3A196 /* JJBoxModel.swift */; };
+		ACBEFA1329CA965600E3A196 /* payConfirmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEFA1229CA965600E3A196 /* payConfirmModel.swift */; };
 		ACF2428529AC698E00157112 /* JJSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2428329AC698E00157112 /* JJSignInViewController.swift */; };
 		ACF2428629AC698E00157112 /* JJSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF2428429AC698E00157112 /* JJSignInViewController.xib */; };
 		ACF2428929ACAA4800157112 /* WareProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2428729ACAA4800157112 /* WareProductViewController.swift */; };
@@ -236,6 +237,7 @@
 		ACBEFA0A29C944A700E3A196 /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
 		ACBEFA0C29C944B300E3A196 /* BoxListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxListViewController.swift; sourceTree = "<group>"; };
 		ACBEFA0E29C94AD700E3A196 /* JJBoxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJBoxModel.swift; sourceTree = "<group>"; };
+		ACBEFA1229CA965600E3A196 /* payConfirmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = payConfirmModel.swift; sourceTree = "<group>"; };
 		ACF2428329AC698E00157112 /* JJSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJSignInViewController.swift; sourceTree = "<group>"; };
 		ACF2428429AC698E00157112 /* JJSignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JJSignInViewController.xib; sourceTree = "<group>"; };
 		ACF2428729ACAA4800157112 /* WareProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WareProductViewController.swift; sourceTree = "<group>"; };
@@ -665,6 +667,7 @@
 		ACBEF9F229C83AFA00E3A196 /* pay */ = {
 			isa = PBXGroup;
 			children = (
+				ACBEFA1129CA963400E3A196 /* model */,
 				ACBEF9F329C83B5300E3A196 /* JJOrderConfirmViewController.swift */,
 				ACBEF9F729C83CF100E3A196 /* JJPayStyleCell.swift */,
 				ACBEF9F829C83CF100E3A196 /* JJPayStyleCell.xib */,
@@ -683,6 +686,14 @@
 				ACBEFA0E29C94AD700E3A196 /* JJBoxModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ACBEFA1129CA963400E3A196 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				ACBEFA1229CA965600E3A196 /* payConfirmModel.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -852,6 +863,7 @@
 				ACBEFA0D29C944B300E3A196 /* BoxListViewController.swift in Sources */,
 				ACB327F828C20D770004F8B2 /* LLSegmentedControl.swift in Sources */,
 				AC92D7C1296FFDF900CE6CA9 /* JJLoginViewController.swift in Sources */,
+				ACBEFA1329CA965600E3A196 /* payConfirmModel.swift in Sources */,
 				ACBEFA0F29C94AD700E3A196 /* JJBoxModel.swift in Sources */,
 				ACB327FB28C20D770004F8B2 /* LLContainerScrollView.swift in Sources */,
 				ACACA9F328BF31190006F495 /* LanguageManager.swift in Sources */,
@@ -1064,11 +1076,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = AC2Q7KVX63;
+				DEVELOPMENT_TEAM = ABWG6HSMKY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XFileOne/sdk",
@@ -1135,7 +1145,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manghe.x1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = manghe_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "XFileOne/XFileOne-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1152,11 +1161,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = AC2Q7KVX63;
+				DEVELOPMENT_TEAM = ABWG6HSMKY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XFileOne/sdk",
@@ -1223,7 +1230,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manghe.x1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = manghe_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "XFileOne/XFileOne-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

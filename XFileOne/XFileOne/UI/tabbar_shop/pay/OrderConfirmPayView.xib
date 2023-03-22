@@ -27,6 +27,9 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="确认支付"/>
+                            <connections>
+                                <action selector="pay:" destination="iN0-l3-epB" eventType="touchUpInside" id="H94-w9-RW6"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clW-5D-4J2">
                             <rect key="frame" x="222" y="18" width="41" height="24"/>
@@ -75,6 +78,9 @@
                                     <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="openProtocol:" destination="iN0-l3-epB" eventType="touchUpInside" id="QR1-ud-FEA"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我已满18岁，已阅读并同意" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODc-wI-hB8">
                             <rect key="frame" x="191.66666666666666" y="4" width="124.33333333333334" height="12"/>
@@ -89,12 +95,16 @@
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWN-O8-1wp">
                             <rect key="frame" x="161.66666666666666" y="-5" width="30" height="30"/>
-                            <color key="backgroundColor" red="0.8862745098" green="0.32156862749999998" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="B4k-bi-Rd8"/>
                                 <constraint firstAttribute="height" constant="30" id="uWc-HW-l34"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="pay_selected"/>
+                            <connections>
+                                <action selector="changeStatus:" destination="iN0-l3-epB" eventType="touchUpInside" id="ema-48-uUN"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -131,6 +141,7 @@
         </view>
     </objects>
     <resources>
+        <image name="pay_selected" width="16.5" height="16.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

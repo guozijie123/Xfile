@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class JJPayProductInfoCell: UITableViewCell {
 
@@ -18,8 +19,12 @@ class JJPayProductInfoCell: UITableViewCell {
     @IBOutlet weak var buy_moreDiscounts: UILabel! // 连续优惠
     @IBOutlet weak var total: UILabel! // 总金额
     
+    
+    var detailModel: payConfirmModel?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
         // Initialization code
     }
 
@@ -27,6 +32,15 @@ class JJPayProductInfoCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    
+    func setPayDetail(model: payConfirmModel) {
+        self.detailModel = model
+        self.total.text = model.amount
+        self.productName.text = model.title
+        self.productIcon.kf.setImage(with: URL(string: model.img))
+        
     }
     
 }
