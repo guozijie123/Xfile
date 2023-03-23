@@ -116,6 +116,10 @@
 		ACBEFA0D29C944B300E3A196 /* BoxListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEFA0C29C944B300E3A196 /* BoxListViewController.swift */; };
 		ACBEFA0F29C94AD700E3A196 /* JJBoxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEFA0E29C94AD700E3A196 /* JJBoxModel.swift */; };
 		ACBEFA1329CA965600E3A196 /* payConfirmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEFA1229CA965600E3A196 /* payConfirmModel.swift */; };
+		ACBEFA1629CBE5F100E3A196 /* WarehouseBoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEFA1429CBE5F100E3A196 /* WarehouseBoxCell.swift */; };
+		ACBEFA1729CBE5F100E3A196 /* WarehouseBoxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBEFA1529CBE5F100E3A196 /* WarehouseBoxCell.xib */; };
+		ACBEFA1A29CBEA4B00E3A196 /* boxRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEFA1829CBEA4B00E3A196 /* boxRecordCell.swift */; };
+		ACBEFA1B29CBEA4B00E3A196 /* boxRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBEFA1929CBEA4B00E3A196 /* boxRecordCell.xib */; };
 		ACF2428529AC698E00157112 /* JJSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2428329AC698E00157112 /* JJSignInViewController.swift */; };
 		ACF2428629AC698E00157112 /* JJSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF2428429AC698E00157112 /* JJSignInViewController.xib */; };
 		ACF2428929ACAA4800157112 /* WareProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2428729ACAA4800157112 /* WareProductViewController.swift */; };
@@ -240,6 +244,10 @@
 		ACBEFA0C29C944B300E3A196 /* BoxListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxListViewController.swift; sourceTree = "<group>"; };
 		ACBEFA0E29C94AD700E3A196 /* JJBoxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJBoxModel.swift; sourceTree = "<group>"; };
 		ACBEFA1229CA965600E3A196 /* payConfirmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = payConfirmModel.swift; sourceTree = "<group>"; };
+		ACBEFA1429CBE5F100E3A196 /* WarehouseBoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarehouseBoxCell.swift; sourceTree = "<group>"; };
+		ACBEFA1529CBE5F100E3A196 /* WarehouseBoxCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarehouseBoxCell.xib; sourceTree = "<group>"; };
+		ACBEFA1829CBEA4B00E3A196 /* boxRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boxRecordCell.swift; sourceTree = "<group>"; };
+		ACBEFA1929CBEA4B00E3A196 /* boxRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = boxRecordCell.xib; sourceTree = "<group>"; };
 		ACF2428329AC698E00157112 /* JJSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJSignInViewController.swift; sourceTree = "<group>"; };
 		ACF2428429AC698E00157112 /* JJSignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JJSignInViewController.xib; sourceTree = "<group>"; };
 		ACF2428729ACAA4800157112 /* WareProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WareProductViewController.swift; sourceTree = "<group>"; };
@@ -367,6 +375,8 @@
 			isa = PBXGroup;
 			children = (
 				AC9B97BF2987A3DC00806481 /* JJRecordViewController.swift */,
+				ACBEFA1829CBEA4B00E3A196 /* boxRecordCell.swift */,
+				ACBEFA1929CBEA4B00E3A196 /* boxRecordCell.xib */,
 			);
 			path = record;
 			sourceTree = "<group>";
@@ -443,6 +453,8 @@
 				ACBEFA0C29C944B300E3A196 /* BoxListViewController.swift */,
 				ACA66EDB29A28B4200760589 /* WarehouseCell.swift */,
 				ACA66EDC29A28B4200760589 /* WarehouseCell.xib */,
+				ACBEFA1429CBE5F100E3A196 /* WarehouseBoxCell.swift */,
+				ACBEFA1529CBE5F100E3A196 /* WarehouseBoxCell.xib */,
 				ACF2428729ACAA4800157112 /* WareProductViewController.swift */,
 				ACF2428829ACAA4800157112 /* WareProductViewController.xib */,
 			);
@@ -771,7 +783,9 @@
 				ACBEFA0629C84F9F00E3A196 /* JJPayProductInfoCell.xib in Resources */,
 				AC9B97D52989F4ED00806481 /* JJAboutUsViewController.xib in Resources */,
 				ACACA9C628BEF4010006F495 /* Assets.xcassets in Resources */,
+				ACBEFA1729CBE5F100E3A196 /* WarehouseBoxCell.xib in Resources */,
 				ACACA9C428BEF4000006F495 /* Main.storyboard in Resources */,
+				ACBEFA1B29CBEA4B00E3A196 /* boxRecordCell.xib in Resources */,
 				AC9F0D38296FE20100CCC966 /* JJAddressEditViewController.xib in Resources */,
 				AC9B97D129891CDA00806481 /* JJUnsubscribeViewController.xib in Resources */,
 				AC9B97AD29866AE600806481 /* UserItemACell.xib in Resources */,
@@ -843,6 +857,7 @@
 				ACACAA0D28BF5D9D0006F495 /* UIButtonExtension.swift in Sources */,
 				ACA66EC929A2122F00760589 /* JJUser.swift in Sources */,
 				ACB327DA28C052E40004F8B2 /* JJToast.swift in Sources */,
+				ACBEFA1A29CBEA4B00E3A196 /* boxRecordCell.swift in Sources */,
 				ACA66ED829A220FA00760589 /* JJManager.swift in Sources */,
 				ACACAA1028BF5D9D0006F495 /* UIcolor+extension.swift in Sources */,
 				AC9B97C02987A3DC00806481 /* JJRecordViewController.swift in Sources */,
@@ -914,6 +929,7 @@
 				AC9B97B72987655A00806481 /* OrderManagerViewController.swift in Sources */,
 				ACA66ED429A21E7900760589 /* HWMultipartData.swift in Sources */,
 				ACBEFA0029C84A6100E3A196 /* OrderConfirmPayView.swift in Sources */,
+				ACBEFA1629CBE5F100E3A196 /* WarehouseBoxCell.swift in Sources */,
 				ACF2428929ACAA4800157112 /* WareProductViewController.swift in Sources */,
 				ACBEF9F929C83CF100E3A196 /* JJPayStyleCell.swift in Sources */,
 				ACACA9FC28BF59720006F495 /* FontFitSizeExtension.swift in Sources */,
@@ -1080,11 +1096,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = AC2Q7KVX63;
+				DEVELOPMENT_TEAM = ABWG6HSMKY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XFileOne/sdk",
@@ -1151,7 +1165,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manghe.x1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = manghe_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "XFileOne/XFileOne-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1168,11 +1181,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = AC2Q7KVX63;
+				DEVELOPMENT_TEAM = ABWG6HSMKY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XFileOne/sdk",
@@ -1239,7 +1250,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manghe.x1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = manghe_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "XFileOne/XFileOne-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

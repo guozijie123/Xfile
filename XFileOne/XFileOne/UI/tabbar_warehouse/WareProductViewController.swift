@@ -25,5 +25,9 @@ class WareProductViewController: BaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func api_getDetail() {
+        IndiaServer.getStart().getTheUserServersRoomLink()
+    }
 
 }
