@@ -46,10 +46,12 @@ class JJWebViewController: BaseViewController,WKScriptMessageHandler,WKNavigatio
         
         let configuration = WKWebViewConfiguration()
         configuration.userContentController = WKUserContentController()
+        configuration.allowsInlineMediaPlayback = true
         let webView = WKWebView(frame: self.view.frame, configuration: configuration)
         configuration.userContentController.add(self, name: "openView")
         webView.scrollView.bounces = true
         webView.scrollView.alwaysBounceVertical = true
+        
         view.addSubview(webView)
         webView.snp.makeConstraints { make in
             make.edges.equalToSuperview()

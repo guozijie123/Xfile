@@ -49,6 +49,8 @@ class JJHomeViewController: BaseViewController,WKScriptMessageHandler,WKNavigati
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
 
+        print("加载完成")
+        
     }
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {

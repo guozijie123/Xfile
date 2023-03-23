@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class JJopenBoxViewController: BaseViewController{
+class JJopenBoxViewController: BaseViewController,WKScriptMessageHandler,WKNavigationDelegate,WKUIDelegate{
     
     
     
@@ -46,6 +46,9 @@ class JJopenBoxViewController: BaseViewController{
         
         let configuration = WKWebViewConfiguration()
         configuration.userContentController = WKUserContentController()
+        configuration.allowsInlineMediaPlayback = true
+        configuration.userContentController.add(self, name: "openWarehouse") //跳转到仓库
+        configuration.userContentController.add(self, name: "openView") //重新购买
         let webView = WKWebView(frame: self.view.frame, configuration: configuration)
 //        configuration.userContentController.add(self, name: "openView")
         webView.scrollView.bounces = true
@@ -66,5 +69,21 @@ class JJopenBoxViewController: BaseViewController{
         self.urlStr = url
         self.webView.load(URLRequest.init(url: URL(string: self.urlStr!)!))
     }
+    
+    
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        
+        if message.name == "openView"{
+
+            print("跳转回到重新购买")
+        }
+        
+        if message.name == "openWarehouse"{
+
+            print("跳转去到仓库列表")
+        }
+        
+    }
+    
     
 }
