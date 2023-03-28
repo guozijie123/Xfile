@@ -37,8 +37,8 @@ class JJPayProductInfoCell: UITableViewCell {
     
     func setPayDetail(model: payConfirmModel) {
         self.detailModel = model
-        self.productPrice.text = model.amount
-        self.total.text = model.payAmount
+        self.productPrice.text = String(model.amount)
+        self.total.text = String(model.payAmount)
         self.productName.text = model.title
         self.productIcon.kf.setImage(with: URL(string: model.img))
         

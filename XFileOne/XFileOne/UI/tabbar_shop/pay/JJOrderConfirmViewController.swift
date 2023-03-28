@@ -114,7 +114,9 @@ extension JJOrderConfirmViewController {
          数量
          
          */
-        IndiaServer.getStart().pushTheAmount(self.detailModel?.amount, payAmount: self.detailModel?.payAmount, couponid: self.detailModel?.couponList.first?.couponid, userid: JJUser.shared.userid, channelId: "1", boxid: self.detailModel?.boxid, count: "1") { payUrl, payOrder, error in
+        let amount = String(self.detailModel?.amount ?? 0.0)
+        let payAmount = String(self.detailModel?.payAmount ?? 0.0)
+        IndiaServer.getStart().pushTheAmount(amount, payAmount: payAmount, couponid: self.detailModel?.couponList.first?.couponid, userid: JJUser.shared.userid, channelId: "1", boxid: self.detailModel?.boxid, count: "1") { payUrl, payOrder, error in
             
             
             if payUrl != nil{
@@ -133,7 +135,7 @@ extension JJOrderConfirmViewController {
             if (result != nil){
                 let model = payConfirmModel.initWithJson(json: result ?? [:])
                 self?.detailModel = model
-                self?.bottomView.total.text = self?.detailModel?.payAmount
+                self?.bottomView.total.text = String(self?.detailModel!.payAmount ?? 0.0)
                 self?.tableView.reloadData()
             }
         }

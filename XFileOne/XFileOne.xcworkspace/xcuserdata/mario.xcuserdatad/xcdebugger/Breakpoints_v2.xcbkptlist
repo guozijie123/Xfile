@@ -215,33 +215,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C206BDBD-6F1E-4327-A544-41BB65F7CD03"
+            uuid = "2DB01DCB-378D-4B64-821A-C2ADDDBFF3F1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "XFileOne/UI/tabbar_shop/pay/OrderConfirmPayView.swift"
+            filePath = "XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "changeStatus(_:)"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "payButtonAction()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D8B44A73-BEFD-45F9-B2C0-BD6CAFADB5CC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "XFileOne/UI/tabbar_shop/pay/OrderConfirmPayView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "awakeFromNib()"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2DB01DCB-378D-4B64-821A-C2ADDDBFF3F1 - 4bfc0ea0cc8c0265"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XFileOne.JJOrderConfirmViewController.payButtonAction() -&gt; ()"
+                  moduleName = "XFileOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mario/Documents/GitHub/Xfile/XFileOne/XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "764">
+               </Location>
+               <Location
+                  uuid = "2DB01DCB-378D-4B64-821A-C2ADDDBFF3F1 - 57bd1c6b075cb529"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in XFileOne.JJOrderConfirmViewController.payButtonAction() -&gt; ()"
+                  moduleName = "XFileOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mario/Documents/GitHub/Xfile/XFileOne/XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
