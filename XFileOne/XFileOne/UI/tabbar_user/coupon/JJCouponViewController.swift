@@ -11,6 +11,8 @@ class JJCouponViewController: BaseViewController {
 
     var tableView: UITableView!
     
+    var cnModelArray: [couponModel?] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "优惠券"
@@ -56,4 +58,37 @@ extension JJCouponViewController: UITableViewDataSource, UITableViewDelegate {
         JJToast.toast(content: "功能尚未开发")
         
     }
+    
+    func get_couponDetail(){
+        //此处需写死useriid 只有这个id才有数据
+        IndiaServer.getStart().getTheUserCouponList(withUserid: "12", couponType: 1) { result, error in
+            
+            
+            if (result != nil){
+                
+                var couponArray = [couponModel]()
+                let list = result as? Array ?? []
+                for couponJson in list {
+                    if let jsonDict = couponJson as? [String: Any] {
+                        let model = couponModel()
+                        model.amount = jsonDict["discount"] as? String??  ""
+                        model.title = jsonDict["title"] as? String
+                        model.couponid = jsonDict["couponid"] as? String
+                        model.boxid = jsonDict["boxid"] as? String
+                        model.time = jsonDict["exptime"] as? String
+                        couponArray.append(model)
+                    }
+                }
+                
+                
+
+            }
+            
+            
+            
+        }
+        
+        
+    }
+    
 }

@@ -166,4 +166,27 @@
  */
 -(void)getThePayDetailWith:(NSString *)boxid userid:(NSString *)userid withBlock:(void(^)(NSDictionary * result,NSString * errorInfo))block;
 
+
+//请求用户的优惠券 参数：userid 是否可用：1可用 2不可用
+/*
+ 返回类型为数组类型
+ "data": [
+ {
+ "title": "无门槛30元优惠券", //标题
+ "couponid": "rrrrr", //优惠券id
+ "discount": 30, //折扣金额
+ "boxid": "", //指定盒子id，为空则通用
+ "exptime": 1675934928 //过期时间
+ },
+ {
+ "title": "无门槛30元优惠券", //标题
+ "couponid": "rrrrr", //优惠券id
+ "discount": 30, //折扣金额
+ "boxid": "", //指定盒子id，为空则通用
+ "exptime": 1675934928 //过期时间
+ }
+ ]
+ */
+-(void)getTheUserCouponListWithUserid:(NSString *)userid CouponType:(int)isUser withBlock:(void(^)(NSArray * result,NSString * errorInfo))block;
+
 @end
