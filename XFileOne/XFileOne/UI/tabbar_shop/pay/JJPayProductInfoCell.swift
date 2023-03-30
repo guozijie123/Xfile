@@ -19,12 +19,14 @@ class JJPayProductInfoCell: UITableViewCell {
     @IBOutlet weak var buy_moreDiscounts: UILabel! // 连续优惠
     @IBOutlet weak var total: UILabel! // 总金额
     
+    @IBOutlet weak var couponContainerView: UIView! // 优惠券容器view
     
     var detailModel: payConfirmModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
+
         // Initialization code
     }
 
@@ -33,6 +35,7 @@ class JJPayProductInfoCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
     
     
     func setPayDetail(model: payConfirmModel) {
@@ -41,6 +44,13 @@ class JJPayProductInfoCell: UITableViewCell {
         self.total.text = String(model.payAmount)
         self.productName.text = model.title
         self.productIcon.kf.setImage(with: URL(string: model.img))
+        
+        if model.selectedCoupon == nil {
+            self.buy_discounts.text = "没有优惠券"
+        }else {
+            self.buy_discounts.text = "¥ -\(model.selectedCoupon!.discount)"
+        }
+        
         
     }
     

@@ -212,6 +212,7 @@
                 <outlet property="buy_count" destination="aSa-iJ-0IP" id="7gK-Sy-YDi"/>
                 <outlet property="buy_discounts" destination="uKD-KT-a0X" id="XCC-Ah-mIF"/>
                 <outlet property="buy_moreDiscounts" destination="6vn-PP-E2C" id="Yju-Hx-aEk"/>
+                <outlet property="couponContainerView" destination="zn5-08-xoz" id="oCB-1J-ydr"/>
                 <outlet property="productIcon" destination="0ug-nf-qRs" id="iO4-yw-fz1"/>
                 <outlet property="productName" destination="48F-8D-YFQ" id="s82-wc-7LT"/>
                 <outlet property="productPrice" destination="Owe-aF-zcf" id="YtO-0V-Wt9"/>

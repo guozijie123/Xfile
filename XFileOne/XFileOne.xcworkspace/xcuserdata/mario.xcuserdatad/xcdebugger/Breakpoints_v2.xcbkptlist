@@ -215,49 +215,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2DB01DCB-378D-4B64-821A-C2ADDDBFF3F1"
+            uuid = "4A4A6741-74A6-4283-813F-4F2E94BF06AF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
+            filePath = "XFileOne/UI/tabbar_shop/pay/model/payConfirmModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "payButtonAction()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2DB01DCB-378D-4B64-821A-C2ADDDBFF3F1 - 4bfc0ea0cc8c0265"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "XFileOne.JJOrderConfirmViewController.payButtonAction() -&gt; ()"
-                  moduleName = "XFileOne"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mario/Documents/GitHub/Xfile/XFileOne/XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
-                  offsetFromSymbolStart = "764">
-               </Location>
-               <Location
-                  uuid = "2DB01DCB-378D-4B64-821A-C2ADDDBFF3F1 - 57bd1c6b075cb529"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in XFileOne.JJOrderConfirmViewController.payButtonAction() -&gt; ()"
-                  moduleName = "XFileOne"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mario/Documents/GitHub/Xfile/XFileOne/XFileOne/UI/tabbar_shop/pay/JJOrderConfirmViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "92">
-               </Location>
-            </Locations>
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "selectedCoupon"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

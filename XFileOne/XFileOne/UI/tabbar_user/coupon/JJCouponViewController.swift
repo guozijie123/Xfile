@@ -70,12 +70,7 @@ extension JJCouponViewController: UITableViewDataSource, UITableViewDelegate {
                 let list = result as? Array ?? []
                 for couponJson in list {
                     if let jsonDict = couponJson as? [String: Any] {
-                        let model = couponModel()
-                        model.amount = jsonDict["discount"] as? String??  ""
-                        model.title = jsonDict["title"] as? String
-                        model.couponid = jsonDict["couponid"] as? String
-                        model.boxid = jsonDict["boxid"] as? String
-                        model.time = jsonDict["exptime"] as? String
+                        let model = couponModel.initWithJson(json: jsonDict)
                         couponArray.append(model)
                     }
                 }

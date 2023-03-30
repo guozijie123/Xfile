@@ -9,7 +9,7 @@ import Foundation
 
 class couponModel:NSObject {
     
-    var amount = ""
+    var amount: Double = 0.0
     var title = ""
     var couponid = ""
     var boxid = ""
@@ -17,7 +17,7 @@ class couponModel:NSObject {
     
     static func initWithJson(json: [AnyHashable:Any]) -> couponModel {
         let obj = couponModel()
-        obj.amount = json[AnyHashable("discount")] as? String ?? ""
+        obj.amount = json[AnyHashable("discount")] as! Double
         obj.title = json[AnyHashable("title")] as? String ?? ""
         obj.couponid = json[AnyHashable("couponid")] as? String ?? ""
         obj.boxid = json[AnyHashable("boxid")] as? String ?? ""

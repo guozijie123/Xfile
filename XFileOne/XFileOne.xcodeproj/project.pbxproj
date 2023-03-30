@@ -17,6 +17,9 @@
 		A5E47D9629C4046E002D8FCD /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E47D9129C4046E002D8FCD /* FBSDKCoreKit.framework */; };
 		A5E47D9729C4046E002D8FCD /* FBSDKCoreKit_Basics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E47D9229C4046E002D8FCD /* FBSDKCoreKit_Basics.framework */; };
 		AC25E53C299BCF550089B79B /* JJWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E53B299BCF550089B79B /* JJWebViewController.swift */; };
+		AC6BF31929D566090088A01C /* CouponSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF31729D566090088A01C /* CouponSelectorViewController.swift */; };
+		AC6BF31D29D567A50088A01C /* OrderCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF31B29D567A50088A01C /* OrderCouponCell.swift */; };
+		AC6BF31E29D567A50088A01C /* OrderCouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6BF31C29D567A50088A01C /* OrderCouponCell.xib */; };
 		AC81D92E298B4723007E2B64 /* JJCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81D92D298B4723007E2B64 /* JJCouponViewController.swift */; };
 		AC81D931298B496E007E2B64 /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81D92F298B496E007E2B64 /* CouponCell.swift */; };
 		AC81D932298B496E007E2B64 /* CouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC81D930298B496E007E2B64 /* CouponCell.xib */; };
@@ -141,6 +144,9 @@
 		A5E47D9229C4046E002D8FCD /* FBSDKCoreKit_Basics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit_Basics.framework; sourceTree = "<group>"; };
 		AC25E53B299BCF550089B79B /* JJWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJWebViewController.swift; sourceTree = "<group>"; };
 		AC25E561299CC0510089B79B /* XFileOne-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XFileOne-Bridging-Header.h"; sourceTree = "<group>"; };
+		AC6BF31729D566090088A01C /* CouponSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponSelectorViewController.swift; sourceTree = "<group>"; };
+		AC6BF31B29D567A50088A01C /* OrderCouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCouponCell.swift; sourceTree = "<group>"; };
+		AC6BF31C29D567A50088A01C /* OrderCouponCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCouponCell.xib; sourceTree = "<group>"; };
 		AC81D92D298B4723007E2B64 /* JJCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJCouponViewController.swift; sourceTree = "<group>"; };
 		AC81D92F298B496E007E2B64 /* CouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
 		AC81D930298B496E007E2B64 /* CouponCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponCell.xib; sourceTree = "<group>"; };
@@ -687,12 +693,15 @@
 			children = (
 				ACBEFA1129CA963400E3A196 /* model */,
 				ACBEF9F329C83B5300E3A196 /* JJOrderConfirmViewController.swift */,
+				AC6BF31729D566090088A01C /* CouponSelectorViewController.swift */,
 				ACBEF9F729C83CF100E3A196 /* JJPayStyleCell.swift */,
 				ACBEF9F829C83CF100E3A196 /* JJPayStyleCell.xib */,
 				ACBEFA0329C84F9F00E3A196 /* JJPayProductInfoCell.swift */,
 				ACBEFA0429C84F9F00E3A196 /* JJPayProductInfoCell.xib */,
 				ACBEF9FF29C84A6100E3A196 /* OrderConfirmPayView.swift */,
 				ACBEFA0129C84A6D00E3A196 /* OrderConfirmPayView.xib */,
+				AC6BF31B29D567A50088A01C /* OrderCouponCell.swift */,
+				AC6BF31C29D567A50088A01C /* OrderCouponCell.xib */,
 			);
 			path = pay;
 			sourceTree = "<group>";
@@ -782,6 +791,7 @@
 				AC9B97A929865F2F00806481 /* OrderCell.xib in Resources */,
 				AC9F0D34296FA92E00CCC966 /* JJAddressCell.xib in Resources */,
 				ACACA9C928BEF4010006F495 /* LaunchScreen.storyboard in Resources */,
+				AC6BF31E29D567A50088A01C /* OrderCouponCell.xib in Resources */,
 				ACACA9EC28BF12BF0006F495 /* Localizable.strings in Resources */,
 				ACBEFA0629C84F9F00E3A196 /* JJPayProductInfoCell.xib in Resources */,
 				AC9B97D52989F4ED00806481 /* JJAboutUsViewController.xib in Resources */,
@@ -878,6 +888,7 @@
 				ACA66EDA29A2276C00760589 /* JJNetworkManager.swift in Sources */,
 				AC9F0D37296FE20100CCC966 /* JJAddressEditViewController.swift in Sources */,
 				ACACAA1228BF70630006F495 /* Tools.swift in Sources */,
+				AC6BF31D29D567A50088A01C /* OrderCouponCell.swift in Sources */,
 				ACA66ED629A21E7900760589 /* HWNetworking.swift in Sources */,
 				AC25E53C299BCF550089B79B /* JJWebViewController.swift in Sources */,
 				AC9B97AC29866AE600806481 /* UserItemACell.swift in Sources */,
@@ -889,6 +900,7 @@
 				ACBEFA0F29C94AD700E3A196 /* JJBoxModel.swift in Sources */,
 				ACB327FB28C20D770004F8B2 /* LLContainerScrollView.swift in Sources */,
 				ACACA9F328BF31190006F495 /* LanguageManager.swift in Sources */,
+				AC6BF31929D566090088A01C /* CouponSelectorViewController.swift in Sources */,
 				ACACA9FB28BF59720006F495 /* ViewFrameExtension.swift in Sources */,
 				AC9B97B02986710400806481 /* UserItemBCell.swift in Sources */,
 				ACACAA0B28BF5D9D0006F495 /* UIView+AnimationProperty.swift in Sources */,
@@ -1100,11 +1112,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = AC2Q7KVX63;
+				DEVELOPMENT_TEAM = ABWG6HSMKY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XFileOne/sdk",
@@ -1171,7 +1181,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manghe.x1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = manghe_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "XFileOne/XFileOne-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1188,11 +1197,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = AC2Q7KVX63;
+				DEVELOPMENT_TEAM = ABWG6HSMKY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XFileOne/sdk",
@@ -1259,7 +1266,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manghe.x1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = manghe_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "XFileOne/XFileOne-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

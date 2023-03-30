@@ -12,6 +12,7 @@ class JJOrderConfirmViewController: BaseViewController {
     var tableView: UITableView!
     var bottomView: OrderConfirmPayView!
     var boxid: String? // boxid
+    var payIndex = 0 // 支付方式Index
     
     
     var detailModel: payConfirmModel? // 订单详情
@@ -80,6 +81,7 @@ extension JJOrderConfirmViewController: UITableViewDataSource, UITableViewDelega
             let cell = tableView.dequeueReusableCell(withIdentifier: "JJPayProductInfoCell", for: indexPath) as! JJPayProductInfoCell
             if let model = self.detailModel {
                 cell.setPayDetail(model: model)
+                cell.couponContainerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapCoupon)))
             }
             return cell
         } else {
@@ -93,13 +95,40 @@ extension JJOrderConfirmViewController: UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return indexPath.section == 0 ? Tools.kScaleUI(size: 292) : Tools.kScaleUI(size: 40)
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        tableView.deselectRow(at: indexPath, animated: false)
+        if indexPath.section == 0 {
+            tableView.selectRow(at: IndexPath(row: payIndex, section: 1), animated: false, scrollPosition: .none)
+        }else {
+            self.payIndex = indexPath.row
+        }
         
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        return view
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return section == 0 ? 0 : 10
     }
 }
 
 extension JJOrderConfirmViewController {
+    
+    func reloadTableView() {
+        self.tableView.reloadData()
+        self.tableView.selectRow(at: IndexPath(row: payIndex, section: 1), animated: false, scrollPosition: .none)
+    }
+    
+    @objc func tapCoupon() {
+        if self.detailModel != nil {
+            let viewController = CouponSelectorViewController.initWithPayConfirm(model: self.detailModel!) {[weak self] index in
+                self?.reloadTableView()
+            }
+            Tools.getTopViewController()?.navigationController?.present(viewController, animated: true)
+        }
+    }
     
     @objc func payButtonAction(){
         
@@ -136,7 +165,7 @@ extension JJOrderConfirmViewController {
                 let model = payConfirmModel.initWithJson(json: result ?? [:])
                 self?.detailModel = model
                 self?.bottomView.total.text = String(self?.detailModel!.payAmount ?? 0.0)
-                self?.tableView.reloadData()
+                self?.reloadTableView()
             }
         }
     }
