@@ -15,7 +15,17 @@ class CouponCell: UITableViewCell {
     @IBOutlet weak var couponTitle: UILabel! // 标题： 无门槛10元优惠券
     @IBOutlet weak var couponDescribe: UILabel! // 描述： 适用于所有盲盒
     @IBOutlet weak var couponDate: UILabel!     // 日期： 有效期至 2023.1.1 - 2023.12.1
-    @IBOutlet weak var userbutton: UIButton!    // 立即使用 
+    @IBOutlet weak var userbutton: UIButton!    // 立即使用
+    
+    var couponModel: payCouponModel! {
+        willSet {
+            DispatchQueue.main.async {
+                self.moneyLabel.text = String(newValue.discount)
+                self.limitLabel.text = "无字段"
+                self.couponTitle.text = newValue.title
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

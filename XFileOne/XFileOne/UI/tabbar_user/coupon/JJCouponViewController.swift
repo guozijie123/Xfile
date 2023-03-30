@@ -8,82 +8,105 @@
 import UIKit
 
 class JJCouponViewController: BaseViewController {
-
-    var tableView: UITableView!
     
-    var cnModelArray: [couponModel?] = []
+    var usableButton:UIButton!  // 可用按钮
+    var unusableButton:UIButton!  // 不可用按钮
+    var switchButton:UIButton!  //
+    var animationLine:UIView!
+    var scrollView:UIScrollView!
+    var VC1: CouponListViewController!
+    var VC2: CouponListViewController!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "优惠券"
-        // Do any additional setup after loading the view.
         initSubViews()
+//        api_getList()
+        // Do any additional setup after loading the view.
+    }
+    override func viewDidLayoutSubviews() {
+        VC1.view.frame = CGRect(x: 0, y: 0, width: Tools.kScreenWidth(), height: scrollView.height)
+        VC2.view.frame = CGRect(x: Tools.kScreenWidth(), y: 0, width: Tools.kScreenWidth(), height: scrollView.height)
     }
     
-
     override func initSubViews() {
-        // tableView
-        tableView = UITableView(frame: CGRectZero, style: .plain)
-        tableView.backgroundColor = UIColor.kRGB(R: 219, G: 227, B: 232)
-        tableView.separatorStyle = .none
-        tableView.showsVerticalScrollIndicator = false
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: "CouponCell", bundle: nil), forCellReuseIdentifier: "CouponCell")
-        view.addSubview(tableView)
-        tableView.snp.makeConstraints { make in
-            make.edges.equalTo(view)
+        self.view.backgroundColor = UIColor.kRGB(R: 230, G: 240, B: 247)
+        
+        let navView = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: 44))
+        navView.backgroundColor = .white
+       
+        let usableButton = UIButton(type: .custom)
+        usableButton.setTitle("可用", for: .normal)
+        usableButton.titleLabel?.font = UIFont.Medium(size: 15)
+        usableButton.setTitleColor(UIColor.kColor(RGB: 56), for: .normal)
+        usableButton.frame = CGRect(x: 0, y: 0, width: 60, height: 44)
+        usableButton.centerX = view.width/4
+        usableButton.addTarget(self, action: #selector(switchType), for: .touchUpInside)
+        
+        let unusableButton = UIButton(type: .custom)
+        unusableButton.setTitle("不可用", for: .normal)
+        unusableButton.titleLabel?.font = UIFont.Medium(size: 15)
+        unusableButton.setTitleColor(UIColor.kColor(RGB: 56), for: .normal)
+        unusableButton.frame = CGRect(x: navView.width - 80, y: 0, width: 60, height: 44)
+        unusableButton.centerX = view.width/4*3
+        unusableButton.addTarget(self, action: #selector(switchType), for: .touchUpInside)
+        
+        navView.addSubview(usableButton)
+        navView.addSubview(unusableButton)
+        
+        let animationLine = UIView()
+        animationLine.backgroundColor = UIColor.kColor(RGB: 56)
+        animationLine.frame = CGRect(x: 0, y: 42, width: 54, height: 2)
+        animationLine.centerX = usableButton.centerX
+        navView.addSubview(animationLine)
+        
+        self.animationLine = animationLine
+        self.usableButton = usableButton
+        self.unusableButton = unusableButton
+        self.switchButton = usableButton
+        view.addSubview(navView)
+        
+        
+        
+        scrollView = UIScrollView()
+        scrollView.contentSize = CGSize(width: Tools.kScreenWidth() * 2, height: 0)
+        scrollView.bounces = false
+        scrollView.isPagingEnabled = true
+        scrollView.isScrollEnabled = false
+        scrollView.showsHorizontalScrollIndicator = false
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints { make in
+            make.top.equalTo(navView.snp.bottom)
+            make.bottom.left.right.equalToSuperview()
+        }
+        
+        VC1 = CouponListViewController.initWithType(usable: true)
+        self.addChild(VC1)
+        scrollView.addSubview(VC1.view)
+        
+        
+        VC2 = CouponListViewController.initWithType(usable: false)
+        self.addChild(VC2)
+        scrollView.addSubview(VC2.view)
+    }
+    
+    @objc func switchType(btn: UIButton) {
+        if switchButton == btn {
+            return
+        }
+        switchButton = btn
+        
+        
+        scrollView.setContentOffset(CGPoint(x: switchButton == usableButton ? 0 : Tools.kScreenWidth() , y: 0), animated: true)
+        
+        UIView.animate(withDuration: 0.25) {
+            self.animationLine.centerX = self.switchButton.centerX
         }
     }
+    
 
 }
 
 
-
-extension JJCouponViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        4
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let CouponCell = tableView.dequeueReusableCell(withIdentifier: "CouponCell", for: indexPath)
-        return CouponCell
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Tools.kScaleUI(size: 128)
-    }
-    
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-        JJToast.toast(content: "功能尚未开发")
-        
-    }
-    
-    func get_couponDetail(){
-        //此处需写死useriid 只有这个id才有数据
-        IndiaServer.getStart().getTheUserCouponList(withUserid: "12", couponType: 1) { result, error in
-            
-            
-            if (result != nil){
-                
-                var couponArray = [couponModel]()
-                let list = result as? Array ?? []
-                for couponJson in list {
-                    if let jsonDict = couponJson as? [String: Any] {
-                        let model = couponModel.initWithJson(json: jsonDict)
-                        couponArray.append(model)
-                    }
-                }
-                
-                
-
-            }
-            
-            
-            
-        }
-        
-        
-    }
-    
-}

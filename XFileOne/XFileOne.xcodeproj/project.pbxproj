@@ -10,7 +10,6 @@
 		298DA2E84F1B5E6C17E38394 /* Pods_XFileOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7974EDBDFB5E504904A06A98 /* Pods_XFileOne.framework */; };
 		A50823D629C7FAE100719C3A /* JJHomeTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50823D529C7FAE100719C3A /* JJHomeTwoViewController.swift */; };
 		A56C62D729CADE050006E982 /* JJopenBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C62D629CADE050006E982 /* JJopenBoxViewController.swift */; };
-		A58F6B3029D413CC003AA7A9 /* couponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F6B2F29D413CB003AA7A9 /* couponModel.swift */; };
 		A5E47D9329C4046E002D8FCD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E47D8E29C4046E002D8FCD /* FBSDKLoginKit.framework */; };
 		A5E47D9429C4046E002D8FCD /* IndiaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E47D8F29C4046E002D8FCD /* IndiaSDK.framework */; };
 		A5E47D9529C4046E002D8FCD /* FBAEMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E47D9029C4046E002D8FCD /* FBAEMKit.framework */; };
@@ -20,6 +19,7 @@
 		AC6BF31929D566090088A01C /* CouponSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF31729D566090088A01C /* CouponSelectorViewController.swift */; };
 		AC6BF31D29D567A50088A01C /* OrderCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF31B29D567A50088A01C /* OrderCouponCell.swift */; };
 		AC6BF31E29D567A50088A01C /* OrderCouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6BF31C29D567A50088A01C /* OrderCouponCell.xib */; };
+		AC6BF32029D58BE80088A01C /* CouponListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF31F29D58BE80088A01C /* CouponListViewController.swift */; };
 		AC81D92E298B4723007E2B64 /* JJCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81D92D298B4723007E2B64 /* JJCouponViewController.swift */; };
 		AC81D931298B496E007E2B64 /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81D92F298B496E007E2B64 /* CouponCell.swift */; };
 		AC81D932298B496E007E2B64 /* CouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC81D930298B496E007E2B64 /* CouponCell.xib */; };
@@ -136,7 +136,6 @@
 		7C5740B6092F739AF423521B /* Pods-XFileOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFileOne.release.xcconfig"; path = "Target Support Files/Pods-XFileOne/Pods-XFileOne.release.xcconfig"; sourceTree = "<group>"; };
 		A50823D529C7FAE100719C3A /* JJHomeTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJHomeTwoViewController.swift; sourceTree = "<group>"; };
 		A56C62D629CADE050006E982 /* JJopenBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJopenBoxViewController.swift; sourceTree = "<group>"; };
-		A58F6B2F29D413CB003AA7A9 /* couponModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = couponModel.swift; sourceTree = "<group>"; };
 		A5E47D8E29C4046E002D8FCD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		A5E47D8F29C4046E002D8FCD /* IndiaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IndiaSDK.framework; sourceTree = "<group>"; };
 		A5E47D9029C4046E002D8FCD /* FBAEMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAEMKit.framework; sourceTree = "<group>"; };
@@ -147,6 +146,7 @@
 		AC6BF31729D566090088A01C /* CouponSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponSelectorViewController.swift; sourceTree = "<group>"; };
 		AC6BF31B29D567A50088A01C /* OrderCouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCouponCell.swift; sourceTree = "<group>"; };
 		AC6BF31C29D567A50088A01C /* OrderCouponCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCouponCell.xib; sourceTree = "<group>"; };
+		AC6BF31F29D58BE80088A01C /* CouponListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponListViewController.swift; sourceTree = "<group>"; };
 		AC81D92D298B4723007E2B64 /* JJCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJCouponViewController.swift; sourceTree = "<group>"; };
 		AC81D92F298B496E007E2B64 /* CouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
 		AC81D930298B496E007E2B64 /* CouponCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponCell.xib; sourceTree = "<group>"; };
@@ -321,7 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				AC81D92D298B4723007E2B64 /* JJCouponViewController.swift */,
-				A58F6B2F29D413CB003AA7A9 /* couponModel.swift */,
+				AC6BF31F29D58BE80088A01C /* CouponListViewController.swift */,
 				AC81D92F298B496E007E2B64 /* CouponCell.swift */,
 				AC81D930298B496E007E2B64 /* CouponCell.xib */,
 			);
@@ -924,12 +924,12 @@
 				AC9B97BA29876DCA00806481 /* UnpaidCell.swift in Sources */,
 				AC9B97C52987B60900806481 /* JJExchangePopView.swift in Sources */,
 				ACB327FC28C20D770004F8B2 /* LLCtlPageView.swift in Sources */,
+				AC6BF32029D58BE80088A01C /* CouponListViewController.swift in Sources */,
 				AC9B97DB298A393E00806481 /* JJCooperationViewController.swift in Sources */,
 				ACACA9E328BF062D0006F495 /* BaseNavigationController.swift in Sources */,
 				ACAC67F8296EBF1B00F6B846 /* JJShopViewController.swift in Sources */,
 				AC9B97A4298644DC00806481 /* VIPCell.swift in Sources */,
 				AC81D931298B496E007E2B64 /* CouponCell.swift in Sources */,
-				A58F6B3029D413CC003AA7A9 /* couponModel.swift in Sources */,
 				ACA66EDD29A28B4200760589 /* WarehouseCell.swift in Sources */,
 				AC81D92E298B4723007E2B64 /* JJCouponViewController.swift in Sources */,
 				AC9B97C72987BA4000806481 /* JJAddressPopView.swift in Sources */,
